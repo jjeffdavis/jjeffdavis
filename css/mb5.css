@@ -1,0 +1,52 @@
+/*  mybootstrap5life.css */
+
+/*
+            html {
+                  background-color: #000;  
+                  color: #fed;
+
+                  font-family: "Papyrus","Beirut","Costello", Fantasy;
+
+                }
+
+*/
+
+            
+
+
+                h3  {
+                  color: #fda ;
+                }
+                
+                .blakk  {
+                  background-color: #000; /* black */
+                  color: #fed;
+                  font-family:  "Comic Sans MS", Fantasy;
+                  }
+                 .turquoise {
+                  background-color: #134; /* dark red  */
+                  color: #fed;
+                }                 
+                .chinese {
+                  background-color: #400; /* dark red  */
+                  color: #fed;
+                }
+                .french { 
+                  color: #24f; 
+                  background-color: #001333; 
+                }       
+                .thirds {
+                  background-color: #020;
+                  color: #3f3;                   
+
+                }  
+
+                .img-container {
+                text-align: center;
+                 }
+                 .white-text {
+                 color: #fff8f0;
+                font-family: "Papyrus","Beirut","Costello", Fantasy;
+                 }
+                 
+                 
