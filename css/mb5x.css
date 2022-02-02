@@ -12,10 +12,25 @@
 */
 
             
-
-                /*  is this doing anything at all???  */
+                p {
+                  font-size: 22px;
+                }
                 h3  {
                   color: #fda ;
+                }                
+                .wow  {
+
+                  font-size: 16px;
+                  
+                  color: #eb8;
+                  font-weight: bold;
+
+                    text-shadow: 
+                                 1px 1px 1px DarkSalmon,
+                                 2px 2px 1px Salmon;
+                    
+                    letter-spacing: 2px;
+
                 }
                 
                 .blakk  {
