@@ -46,6 +46,11 @@
                   background-color: #400; /* dark red  */
                   color: #fed;
                 }
+
+                .violet {
+                  background-color: rgb(36, 10, 49);  
+                  color: #fed;
+                }
                 .navy { 
                   color: #24f; 
                   background-color: #001333; 
@@ -63,4 +68,6 @@
                 font-family: "Papyrus","Beirut","Costello", Fantasy;
                  }
                  
-                 
+                .header-color {   /* not working: not overriding bs5 color */
+                    background-color: #429;  
+                }
