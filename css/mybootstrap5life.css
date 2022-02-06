@@ -3,17 +3,17 @@
 
   html {
 
-        font-family: Papyrus, Quicksand, Mukta, sans-serif ;
+        font-family: /* Papyrus, */ Quicksand, Mukta, sans-serif ;
       }
 
 
 
       table {
-      border: 3px solid black;
+      border: 3px solid #700;
         }
       thead th {
         border-bottom: 4px solid #444444;
-        width: 120px;
+        width: 100%;
         }
       tfoot td {
         border-top: 3px solid #444444;
@@ -26,13 +26,13 @@
       }                
       .wow  {
 
-        font-size: 16px;
+        font-size: 24px;
         
         color: #eb8;
         font-weight: bold;
 
           text-shadow: 
-                        1px 1px 1px DarkSalmon,
+                        3px 3px 3px DarkSalmon,
                         2px 2px 1px Salmon;
           
           letter-spacing: 2px;
@@ -66,8 +66,8 @@
         color: #3f3;                   
       }  
 
-      .img-container {
-      text-align: right;
+      .img-container .right-wing {
+        text-align: right;
         }
         .white-text {
         color: #fff8f0;
@@ -77,3 +77,5 @@
       .header-color {   /* not working: not overriding bs5 color */
           background-color: #429;  
       }
+
+
