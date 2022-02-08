@@ -1,0 +1,125 @@
+nation.euro.txt
+
+MariaDB [nation]> select k.name, r.name, c.name
+-> from continents k, regions r, countries c
+-> where
+-> k.continent_id = r.continent_id and
+-> r.region_id = c.region_id and
+-> k.name = 'Europe'
+-> order by c.name;
++--------+------------------+-------------------------------+
+| name | name | name |
++--------+------------------+-------------------------------+
+| Europe | Southern Europe | Albania |
+| Europe | Southern Europe | Andorra |
+| Europe | Western Europe | Austria |
+| Europe | Eastern Europe | Belarus |
+| Europe | Western Europe | Belgium |
+| Europe | Southern Europe | Bosnia and Herzegovina |
+| Europe | Eastern Europe | Bulgaria |
+| Europe | Southern Europe | Croatia |
+| Europe | Eastern Europe | Czech Republic |
+| Europe | Nordic Countries | Denmark |
+| Europe | Baltic Countries | Estonia |
+| Europe | Nordic Countries | Faroe Islands |
+| Europe | Nordic Countries | Finland |
+| Europe | Western Europe | France |
+| Europe | Western Europe | Germany |
+| Europe | Southern Europe | Gibraltar |
+| Europe | Southern Europe | Greece |
+| Europe | Southern Europe | Holy See (Vatican City State) |
+| Europe | Eastern Europe | Hungary |
+| Europe | Nordic Countries | Iceland |
+| Europe | British Islands | Ireland |
+| Europe | Southern Europe | Italy |
+| Europe | Baltic Countries | Latvia |
+| Europe | Western Europe | Liechtenstein |
+| Europe | Baltic Countries | Lithuania |
+| Europe | Western Europe | Luxembourg |
+| Europe | Southern Europe | Macedonia |
+| Europe | Southern Europe | Malta |
+| Europe | Eastern Europe | Moldova |
+| Europe | Western Europe | Monaco |
+| Europe | Western Europe | Netherlands |
+| Europe | Nordic Countries | Norway |
+| Europe | Eastern Europe | Poland |
+| Europe | Southern Europe | Portugal |
+| Europe | Eastern Europe | Romania |
+| Europe | Eastern Europe | Russian Federation |
+| Europe | Southern Europe | San Marino |
+| Europe | Eastern Europe | Slovakia |
+| Europe | Southern Europe | Slovenia |
+| Europe | Southern Europe | Spain |
+| Europe | Nordic Countries | Svalbard and Jan Mayen |
+| Europe | Nordic Countries | Sweden |
+| Europe | Western Europe | Switzerland |
+| Europe | Eastern Europe | Ukraine |
+| Europe | British Islands | United Kingdom |
+| Europe | Southern Europe | Yugoslavia |
++--------+------------------+-------------------------------+
+46 rows in set (0.002 sec)
+
+select \* from continents;
++--------------+---------------+
+| continent_id | name |
++--------------+---------------+
+| 1 | North America |
+| 2 | Asia |
+| 3 | Africa |
+| 4 | Europe |
+| 5 | South America |
+| 6 | Oceania |
+| 7 | Antarctica |
++--------------+---------------+
+
+INSERT INTO regions (name, continent_id)
+VALUES ('Middle Europe', 4 );
+
+MariaDB [nation]> select \* from regions;
++-----------+---------------------------+--------------+
+| region_id | name | continent_id |
++-----------+---------------------------+--------------+
+| 1 | Caribbean | 1 |
+| 2 | Southern and Central Asia | 2 |
+| 3 | Central Africa | 3 |
+| 4 | Southern Europe | 4 |
+| 5 | Middle East | 2 |
+| 6 | South America | 5 |
+| 7 | Polynesia | 6 |
+| 8 | Antarctica | 7 |
+| 9 | Australia and New Zealand | 6 |
+| 10 | Western Europe | 4 |
+| 11 | Eastern Africa | 3 |
+| 12 | Western Africa | 3 |
+| 13 | Eastern Europe | 4 |
+| 14 | Central America | 1 |
+| 15 | North America | 1 |
+| 16 | Southeast Asia | 2 |
+| 17 | Southern Africa | 3 |
+| 18 | Eastern Asia | 2 |
+| 19 | Nordic Countries | 4 |
+| 20 | Northern Africa | 3 |
+| 21 | Baltic Countries | 4 |
+| 22 | Melanesia | 6 |
+| 23 | Micronesia | 6 |
+| 24 | British Islands | 4 |
+| 25 | Micronesia/Caribbean | 6 |
+| 26 | Middle Europe | 4 |
++-----------+---------------------------+--------------+
+
+MariaDB [nation]> insert into countries (name, area, national_day, country_code2, country_code3, region_id)
+values ("Herzoslovakia", 81679.00, "1207=02-11", "HZ", "HEZ", 26);
+insert into countries (name, area, national_day, country_code2, country_code3, region_id)
+values ("Slavonia", 91679.00, "1918-02-11", "SV", "SLV", 26);
+insert into countries (name, area, national_day, country_code2, country_code3, region_id)
+values ("Stenzilvania", 121679.00, "1408-02-11", "SE", "STE", 26);
+insert into countries (name, area, national_day, country_code2, country_code3, region_id)
+values ("Old Hat", 179.00, "2021-02-11", "OH", "OLD", 26);
+
+$sql = 'INSERT INTO countries (name, area, national_day, country_code2, country_code3, region_id)
+values ("Slavonia", 91679.00, "1918-02-11", "SX", "SLV", 26)';
+
+select _ from countries order by country_code2;
+select _ from countries where country_code2 = "SX";
+// some of europe.... remove backslash:  
+MariaDB [nation]> select \* from countries where region_id = 4 OR region_id = 21 OR region_id = 26 OR region_id = 10 OR region_id =13 order by country_code2;

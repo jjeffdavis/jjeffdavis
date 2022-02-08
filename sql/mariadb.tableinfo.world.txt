@@ -1,0 +1,30 @@
+MariaDB [information_schema]> select table_schema, table_name, column_name, is_nullable, column_
++--------------+-----------------+----------------+-------------+----------------+--------------
+| table_schema | table_name | column_name | is_nullable | column_default | column_type |
++--------------+-----------------+----------------+-------------+----------------+--------------
+| world | city | ID | NO | NULL | int(11) |
+| world | city | Name | NO | '' | char(35) |
+| world | city | CountryCode | NO | '' | char(3) |
+| world | city | District | NO | '' | char(20) |
+| world | city | Population | NO | 0 | int(11) |
+| world | country | Code | NO | '' | char(3) |
+| world | country | Name | NO | '' | char(52) |
+| world | country | Continent | NO | 'Asia' | enum('Asia','Europe','North America','Africa','Oce
+| world | country | Region | NO | '' | char(26) |
+| world | country | SurfaceArea | NO | 0.00 | float(10,2) |
+| world | country | IndepYear | YES | NULL | smallint(6) |
+| world | country | Population | NO | 0 | int(11) |
+| world | country | LifeExpectancy | YES | NULL | float(3,1) |
+| world | country | GNP | YES | NULL | float(10,2) |
+| world | country | GNPOld | YES | NULL | float(10,2) |
+| world | country | LocalName | NO | '' | char(45) |
+| world | country | GovernmentForm | NO | '' | char(45) |
+| world | country | HeadOfState | YES | NULL | char(60) |
+| world | country | Capital | YES | NULL | int(11) |
+| world | country | Code2 | NO | '' | char(2) |
+| world | countrylanguage | CountryCode | NO | '' | char(3) |
+| world | countrylanguage | Language | NO | '' | char(30) |
+| world | countrylanguage | IsOfficial | NO | 'F' | enum('T','F') |
+| world | countrylanguage | Percentage | NO | 0.0 | float(4,1) |
++--------------+-----------------+----------------+-------------+----------------+--------------
+\_name,2is_nullable,4column_default, column_type from columns where table_schema = 'world' order
