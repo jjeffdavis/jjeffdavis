@@ -23,30 +23,31 @@
 
 <body>
 <!--  page top -->
-<div class="container-fluid p-5  bg-dark   text-white text-center header-color">
+<div class="container-fluid p-5  bg-dark   text-white ">
   <h1 id="topopage">Jeff Davis CS130 ------  Not <sup>Waving</sup> But <sub>Drowning</sub></h1>
-      <div class="img-container "> 
+      <div class="force-center "> 
         <img class="img-fluid mx-auto" src="img/twoBabyTigers.jpg" alt="fix me">
       </div>
 </div>
 <hr>
 <!--  outer container contains rows ; inner container  2 boxes per row -->
-<div class="container mt-0 blakk" >
+<div class="container mt-0 blakk force-center" >
   <div class="row">
    
     
 
      <!--  box 1 of row 1--> 
     <div class=" dgreen  col-sm-5 white-text" >
-      <h3 class="text-center">Contact Info</h3>
+      <h3 class="force-center">Contact Info</h3>
    
-      <div class="img-container "> 
+      <div class="force-center "> 
       <img class="img-fluid mx-auto" src="https://c532f75abb9c1c021b8c-e46e473f8aadb72cf2a8ea564b4e6a76.ssl.cf5.rackcdn.com/2017/02/09/dbnuxsjqo_Julie_Larsen_Maher_1494_Malayan_Tiger_Cubs_TAB_BZ_03_03_16.jpg" alt="John Doe">
       </div> 
 
 
       <!-- contact info table -->
-      <table class="styled-table center">
+
+      <table class="general-table ">
         <!--    
         <thead>
             <tr>
@@ -72,25 +73,28 @@
               <td>Email</td>
               <td>jjeffdavis@hotmail.com</td>
           </tr>
-            <!-- and so on... -->
+
         </tbody>
         </table>
 
+        <br>
+        <br>
+        <br>
     </div>  <!--    end container col-sm-7  -->
   
     
 
  <!-- box 2 of row 1 -->   
     <div class=" col-sm-7  navy white-text">
-      <h3 class="text-center">My Favorite Music and Cinema</h3>
+      <h3 class="force-center">My Favorite Music and Cinema</h3>
 
-      <div class="img-container"> 
+      <div class="force-center"> 
         <img class="img-fluid  mx-auto" src="img/flatcadillac.jpg" alt="John Doe">
         </div>
 
 
       <!-- films and music i like info table -->
-      <table class="styled-table center">
+      <table class="general-table force-center">
 
         <thead>
             <tr>
@@ -131,11 +135,11 @@
     <!--  second row of box containers--> 
      <!--  box 1 of row 2--> 
      <div class="dturquoise  col-sm-6 white-text" >
-      <h3 class="text-center">See Me At MiraCosta College</h3>
+      <h3 class="force-center">See Me At MiraCosta College</h3>
 
 
       
-      <div class="img-container "> 
+      <div class="force-center "> 
       <!-- imbedded map -->         <!-- width="400" height="450"  --> 
       <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2953.376381663725!2d-117.30391267074707!3d33.1890546058206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc71bcae6b29bd%3A0x7a367e03d1341b81!2sMiraCosta%20College!5e0!3m2!1sen!2sus!4v1644372628225!5m2!1sen!2sus"
       style="border:0;" height="700" allowfullscreen="" loading="lazy"></iframe>
@@ -147,19 +151,30 @@
 
  <!-- box 2 of row-2 -->     
     <div class="col-sm-6 maroon white-text ">
-      <h3 class="text-center">...this is NOT me...</h3>  
-            <div class="img-container "> 
-              <img class="img-fluid  mx-auto" src="img/freckleboy.jpg" alt="fix me">
-            </div>      
-        <p class="text-center"> <br>
-        Oh, no no no, it was <sup>too cold</sup> always<br>   
-        (Still the dead one lay moaning) <br>  
-        I was much too far out all my life</p>  
-        <p> And .......</p>
-        <p class="right-wing">  ......not waving but drowning.<br>
-        </p>
+      <h3 class="force-center">About this page</h3>  
+
+      <!------
+      <div class="force-center "> 
+        <img class="img-fluid  mx-auto" src="img/freckleboy.jpg" alt="fix me">
+      </div>     
+    --> 
+
+      <p> <br>
+
+  This page is a fairly complicated mess of Bootstrap 5, HTML and CSS.<br><br>
+  ...The title, Not Waving But Drowning is a poem by Stevie Smith (England.)
+  ...I started by creating a modest page squarely placed on Bootstrap so that this could be
+  displayed on Androids as well as on large-screen Windows and Mac computers.<br><br>
+  ...The rest was fun, trying out all sorts of HTML and CSS to get everything centered in the column containers.<br><br>
+  ...It was no small chore to get the CSS to format attractive tables.<br><br>
+  ...The one part that doesn't work is the MiraCosta map.  The width defaults to 300 px.  
+  ...At 300 px, it runs outside of its container for some widths.  If I chose a smaller width,
+  it would render the map uselessly small.<br><br>
+
+
+      </p>
     </div>     
-    <hr>
+
     
   
 

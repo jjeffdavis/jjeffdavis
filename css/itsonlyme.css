@@ -1,5 +1,5 @@
 /*  itsonlyme.css */
-.styled-table {
+.general-table {
   border-collapse: collapse;
   margin: 25px 0;
   font-size: 0.9em;
@@ -9,37 +9,34 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-.styled-table thead tr {
+.general-table thead tr {
   background-color: #009879;
   color: #ffffff;
   text-align: left;
 }
-.styled-table tbody tr {
+.general-table tbody tr {
   border-bottom: 1px solid #dddddd;
 }
 
-.styled-table tbody tr:nth-of-type(even) {
+.general-table tbody tr:nth-of-type(even) {
   background-color: #163;
 }
 
-table.center {
-  margin-left: auto; 
-  margin-right: auto;
-}
 
-.text-center {
+.force-center  {
     text-align: center;
 }
 /*
-.styled-table tbody tr:last-of-type {
+.general-table tbody tr:last-of-type {
   border-bottom: 2px solid #009879;
 }
 
-.styled-table tbody tr.active-row {
+.general-table tbody tr.active-row {
   font-weight: bold;
   color: #009879;
 }
 */
+/*
 .right {
   text-align: right;
   margin-right: 1em;
@@ -49,10 +46,10 @@ table.center {
   text-align: left;
   margin-left: 1em;
 }
+*/
+  h1  h3  {
 
-  html {
-
-        font-family: /* Papyrus, */ Quicksand, Mukta, sans-serif ;
+        font-family: Papyrus,  Quicksand, Mukta, sans-serif ;
       }
 
 
@@ -69,11 +66,10 @@ table.center {
         } 
 */          
       p {
-        font-size: 22px;
+        font-size: 16px;
       }
-      h3  {
-        font-family: Papyrus, Quicksand, Mukta, sans-serif ;
-      }                
+
+      /*          
       .wow  {
 
         font-size: 24px;
@@ -86,9 +82,8 @@ table.center {
                         2px 2px 1px Salmon;
           
           letter-spacing: 2px;
-
       }
-      
+      */
       .blakk  {
         background-color: #000; /* black */
         color: #fed;
@@ -116,16 +111,12 @@ table.center {
         color: #3f3;                   
       }  
 
-      .img-container  {
-        text-align: center;
-        }
+
         .white-text {
         color: #fff8f0;
       font-family: "Papyrus","Beirut","Costello", Fantasy;
         }
         
-      .header-color {   /* not working: not overriding bs5 color */
-          background-color: #429;  
-      }
+
 
 
