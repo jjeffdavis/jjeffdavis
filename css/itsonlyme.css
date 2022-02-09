@@ -27,7 +27,9 @@ table.center {
   margin-right: auto;
 }
 
-
+.text-center {
+    text-align: center;
+}
 /*
 .styled-table tbody tr:last-of-type {
   border-bottom: 2px solid #009879;
@@ -114,8 +116,8 @@ table.center {
         color: #3f3;                   
       }  
 
-      .img-container .right-wing {
-        text-align: right;
+      .img-container  {
+        text-align: center;
         }
         .white-text {
         color: #fff8f0;
