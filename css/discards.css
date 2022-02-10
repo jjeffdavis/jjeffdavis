@@ -1,0 +1,53 @@
+/* css discards.css */
+
+     /*          
+      .wow  {
+
+        font-size: 24px;
+        
+        color: #eb8;
+        font-weight: bold;
+
+          text-shadow: 
+                        3px 3px 3px DarkSalmon,
+                        2px 2px 1px Salmon;
+          
+          letter-spacing: 2px;
+      }
+      */
+      .blakk  {
+        background-color: #000; /* black */
+        color: #fed;
+        font-family:  "Comic Sans MS", Fantasy;
+      }
+      .dturquoise {
+        background-color: #134; /* dark red  */
+        color: #fed;
+      }                 
+      .maroon {
+        background-color: #400; /* dark red  */
+        color: #fed;
+      }
+
+      .violet {
+        background-color: rgb(36, 10, 49);  
+        color: #fed;
+      }
+      .navy { 
+        color: #24f; 
+        background-color: #001333; 
+      }       
+      .dgreen {
+        background-color: #020;
+        color: #3f3;                   
+      }  
+
+
+        .white-text {
+        color: #fff8f0;
+        /*
+        font-family: "Papyrus","Beirut","Costello", Fantasy;
+        */
+        font-family:  /*"Papyrus", */"Mukta", "Quicksand", Fantasy;
+        }
+
