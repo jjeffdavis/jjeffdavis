@@ -2,16 +2,16 @@
 
 html{ /* does nothing. */
 
-  font-family: "Dosis","Beirut","Costello", Fantasy;
+  font-family: "Dosis","Papyrus", Fantasy;
 }
 
 body{  /* font doesnt work */
 
   background-color: #003;
-  color: #def;
-  font-family:  "Dosis", "Mukta", "Quicksand", Fantasy;
+  color: #fed;
+  font-family:  "Dosis", "Quicksand", Fantasy;
     /* this margin appears to cover the whole page */
-  margin: 125px 0px 50px 200px ;  /* top right bottom left */
+  margin: 35px 0px 35px 35px ;  /* top right bottom left */
 
     }
   
@@ -32,32 +32,31 @@ body{  /* font doesnt work */
   text-align: right;
 }
 
-dl dt /* description list */ {
-margin-left: 18px;
-color: #003;
-background-color: #def;
-
-}
-/* why doesn't this work???
-tr td, tr th {
-  margin-right: 10px;
-}
-*/
 table {
-border: 4px dashed #fed;
+border: 2px dashed #fed;
 }
 body tr {
-  border: 4px dashed #fed;
+  border: 2px dashed #fed;
   }
 tfoot td {
-  border-top: 4px dashed #fed;
+  border-top: 2px dashed #fed;
   } 
   
 p {
-  font-size: 18px;
+  font-size: 7px;
 }
 
  
+dl dt /* description list */ {
+  margin-left: 18px;
+  color: #003;
+  background-color: #fed;
+  }
+  /* why doesn't this work???
+  tr td, tr th {
+    margin-right: 10px;
+  }
+  */
 
 
 
