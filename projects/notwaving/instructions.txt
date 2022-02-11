@@ -1,0 +1,36 @@
+instructions.txt
+
+unzip css130.zip into a clean directory.
+it will generate the following:
+
+Archive: cs130.zip
+Length Date Time Name
+
+---
+
+    10407  02-10-2022 20:15   CS130JeffDavis.html
+        0  02-10-2022 20:35   audio/
+     6148  02-10-2022 20:35   audio/.DS_Store
+
+7780247 01-13-2022 21:20 audio/Steeleye Span - Lovely on the Water.mp3
+0 02-10-2022 20:36 css/
+6148 02-10-2022 20:36 css/.DS_Store
+948 02-10-2022 20:17 css/mydefault.css
+0 02-10-2022 20:34 img/
+6148 02-10-2022 20:34 img/.DS_Store
+236650 01-22-2022 21:13 img/NewYorker1982.jpg
+173418 01-29-2022 16:36 img/twoBabyTigers.jpg
+897171 02-10-2022 18:46 img/pearlClage.jpg
+33809 01-05-2022 22:18 img/freckleboy.jpg
+0 02-10-2022 17:22 video/
+12794787 01-15-2022 18:00 video/Ja t'ho dire??-Si vens.mp4
+
+---
+
+21945881 15 files
+
+ignore the .DS_Store files. this is mac osx garbage.
+
+run CSS130JeffDavis.html in local host.
+
+here are 2 screen grabs of what you will see:

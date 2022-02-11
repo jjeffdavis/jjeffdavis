@@ -1,12 +1,5 @@
 /*  mydefault.css */
-
-html{ /* does nothing. */
-
-  font-family: "Dosis","Papyrus", Fantasy;
-}
-
 body{  /* font doesnt work */
-
   background-color: #003;
   color: #fed;
   font-family:  "Dosis", "Quicksand", Fantasy;
@@ -15,14 +8,11 @@ body{  /* font doesnt work */
 
     }
   
-
-
-
 .table-center {     /* for centering tables */
   margin-left: auto;
   margin-right: auto;
 }
-.force-center  { /* for centering just about everything else */
+.force-center, .img-container  { /* for centering just about everything else */
     text-align: center;
 }
 .force-left {
@@ -31,6 +21,7 @@ body{  /* font doesnt work */
 .force-right {
   text-align: right;
 }
+
 
 table {
 border: 2px dashed #fed;
@@ -42,11 +33,6 @@ tfoot td {
   border-top: 2px dashed #fed;
   } 
   
-p {
-  font-size: 7px;
-}
-
- 
 dl dt /* description list */ {
   margin-left: 18px;
   color: #003;
@@ -57,6 +43,10 @@ dl dt /* description list */ {
     margin-right: 10px;
   }
   */
+  p.innerTableText {
+    font-size: 27px;   
+  }
 
-
-
+  pre{ 
+    font-family: "Dosis","Papyrus", Fantasy;
+  }
