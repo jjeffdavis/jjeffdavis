@@ -1,0 +1,126 @@
+/*  itsonlyme.css */
+.general-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 500px;
+  max-width: 600px;
+  /*
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  */
+}
+
+.general-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+.general-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.general-table tbody tr:nth-of-type(even) {
+  background-color: #163;
+}
+
+.table-center {     /* for centering tables */
+  margin-left: auto;
+  margin-right: auto;
+}
+.force-center  { /* for centering just about everything else */
+    text-align: center;
+}
+.forcce-left {
+    text-align: left;
+}
+/*
+.general-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.general-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+*/
+/*
+.right {
+  text-align: right;
+  margin-right: 1em;
+}
+
+.left {
+  text-align: left;
+  margin-left: 1em;
+}
+*/
+
+
+/*
+      table {
+      border: 3px solid #3b6;
+        }
+      thead th {
+        border-bottom: 4px solid #444444;
+        width: 100%;
+        }
+      tfoot td {
+        border-top: 3px solid #444444;
+        } 
+*/          
+      p {
+        font-size: 18px;
+      }
+
+      /*          
+      .wow  {
+
+        font-size: 24px;
+        
+        color: #eb8;
+        font-weight: bold;
+
+          text-shadow: 
+                        3px 3px 3px DarkSalmon,
+                        2px 2px 1px Salmon;
+          
+          letter-spacing: 2px;
+      }
+      */
+      .blakk  {
+        background-color: #000; /* black */
+        color: #fed;
+        font-family:  "Comic Sans MS", Fantasy;
+      }
+      .dturquoise {
+        background-color: #134; /* dark red  */
+        color: #fed;
+      }                 
+      .maroon {
+        background-color: #400; /* dark red  */
+        color: #fed;
+      }
+
+      .violet {
+        background-color: rgb(36, 10, 49);  
+        color: #fed;
+      }
+      .navy { 
+        color: #24f; 
+        background-color: #001333; 
+      }       
+      .dgreen {
+        background-color: #020;
+        color: #3f3;                   
+      }  
+
+
+        .white-text {
+        color: #fff8f0;
+        font-family: "Papyrus","Beirut","Costello", Fantasy;
+        }
+        
+
+
+
