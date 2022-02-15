@@ -1,8 +1,13 @@
 /*  mydefault.css */
-body{  /* font doesnt work */
-  background-color: #003;
+body{  
+  background-color: #023;
   color: #fed;
   font-family:  "Dosis", "Quicksand", Fantasy;
+    /*
+  font-family: "Unica One","Papyrus", cursive;
+
+  font-family:  "Dosis", "Quicksand", Fantasy;
+  */
     /* this margin appears to cover the whole page */
   margin: 35px 0px 35px 35px ;  /* top right bottom left */
 
@@ -48,5 +53,5 @@ dl dt /* description list */ {
   }
 
   pre{ 
-    font-family: "Dosis","Papyrus", Fantasy;
+    font-family: "Unica One","Dosis","Papyrus", Fantasy;
   }

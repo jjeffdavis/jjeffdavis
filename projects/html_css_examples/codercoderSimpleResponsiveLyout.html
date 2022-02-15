@@ -1,0 +1,240 @@
+<html lang="en-US">
+   <head>
+      <!---   from https://github.com/thecodercoder/Simple-Responsive-Layout/blob/master/index.html
+         https://coder-coder.com/build-flexbox-website-layout/
+         -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Simple Responsive Layout</title>
+      <link rel="stylesheet" href="dist/style.css">
+      <style>
+        *, :after, :before {
+        	box-sizing: border-box
+        }
+        html {
+        	font-size: 100%
+        }
+        body {
+        	margin: 0;
+        	padding: 20px;
+        	font-family: Arial, Helvetica, sans-serif;
+        	font-size: 1rem;
+        	color: #fff
+        }
+        .wrapper {
+        	margin: auto;
+        	max-width: 75rem
+        }
+        aside, footer, header, main, section {
+        	display: block;
+        	margin: 0;
+        	padding: 1.25rem;
+        	border: 1px solid #000;
+        	color: #fff
+        }
+        main {
+        	background: #000
+        }
+        .header {
+        	background: #003
+        }
+        .hero {
+        	background: #300
+        }
+        @media screen and (min-width:640px) {
+        	.flex-container {
+        		display: flex
+        	}
+        }
+        .content {
+        	flex: 1;
+        	background: #022
+        }
+        .sidebar {
+        	flex: 0 1 300px;
+        	background: #205
+        }
+        .footer, .sidebar {
+        	border: 1px solid #000
+        }
+        . footer {
+        	background: #222
+        }
+
+      </style>
+   </head>
+   <body>
+      <!-- Main Content -->
+      <main>
+         Main
+         <!-- Header -->
+         <header class="header">
+            Header
+            <h4>
+               source:  codercoder.com    
+            </h4>
+         </header>
+         <!-- Hero -->
+         <section class="hero">
+            Hero
+            <p>
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sumenda potius quam expetenda. Nihil opus est exemplis hoc facere longius.
+            </p>
+         </section>
+         <div class="flex-container wrapper">
+            <!-- Content -->
+            <section class="content">
+               Content
+               <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sumenda potius quam expetenda. Nihil opus est exemplis hoc facere longius. At Zeno eum non beatum modo, sed etiam divitem dicere ausus est. Nunc ita separantur, ut disiuncta sint, quo nihil potest esse perversius. Itaque quantum adiit periculum! ad honestatem enim illum omnem conatum suum referebat, non ad voluptatem. Ergo id est convenienter naturae vivere, a natura discedere. Esse enim quam vellet iniquus iustus poterat inpune. Tu enim ista lenius, hic Stoicorum more nos vexat. Duo Reges: constructio interrete.
+               </p>
+               <p>
+                  Quam ob rem tandem, inquit, non satisfacit? Haec quo modo conveniant, non sane intellego. Ita ceterorum sententiis semotis relinquitur non mihi cum Torquato, sed virtuti cum voluptate certatio. Tubulum fuisse, qua illum, cuius is condemnatus est rogatione, P. Quem ad modum quis ambulet, sedeat, qui ductus oris, qui vultus in quoque sit? Miserum hominem! Si dolor summum malum est, dici aliter non potest. Quo tandem modo? Ex rebus enim timiditas, non ex vocabulis nascitur. Deinde prima illa, quae in congressu solemus: Quid tu, inquit, huc? Quod eo liquidius faciet, si perspexerit rerum inter eas verborumne sit controversia.
+               </p>
+            </section>
+            <!-- Sidebar -->
+            <aside class="sidebar">
+               Sidebar                
+               <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sumenda potius quam expetenda. Nihil opus est exemplis hoc facere longius. At Zeno eum non beatum modo, sed etiam divitem dicere ausus est. Nunc ita separantur, ut disiuncta sint, quo nihil potest esse perversius. Itaque quantum adiit periculum!
+               </p>
+            </aside>
+         </div>
+         <!-- Footer -->
+         <footer class="footer">
+            Footer                
+            <p>
+               Esse enim quam vellet iniquus iustus poterat inpune. Tu enim ista lenius, hic Stoicorum more nos vexat. Duo Reges: constructio interrete.
+            </p>
+            <br>
+            <pre>
+
+&lt;html lang="en-US"&gt;
+&lt;head&gt;
+&lt;!---   from https://github.com/thecodercoder/Simple-Responsive-Layout/blob/master/index.html
+    https://coder-coder.com/build-flexbox-website-layout/
+    --&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+&lt;title&gt;Simple Responsive Layout&lt;/title&gt;
+&lt;link rel="stylesheet" href="dist/style.css"&gt;
+&lt;style&gt;
+    *, :after, :before {
+        box-sizing: border-box
+    }
+    html {
+        font-size: 100%
+    }
+    body {
+        margin: 0;
+        padding: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        color: #fff
+    }
+    .wrapper {
+        margin: auto;
+        max-width: 75rem
+    }
+    aside, footer, header, main, section {
+        display: block;
+        margin: 0;
+        padding: 1.25rem;
+        border: 1px solid #000;
+        color: #fff
+    }
+    main {
+        background: #000
+    }
+    .header {
+        background: #003
+    }
+    .hero {
+        background: #300
+    }
+    @media screen and (min-width:640px) {
+        .flex-container {
+            display: flex
+        }
+    }
+    .content {
+        flex: 1;
+        background: #022
+    }
+    .sidebar {
+        flex: 0 1 300px;
+        background: #205
+    }
+    .footer, .sidebar {
+        border: 1px solid #000
+    }
+    . footer {
+        background: #222
+    }
+
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;!-- Main Content --&gt;
+&lt;main&gt;
+    Main
+    &lt;!-- Header --&gt;
+    &lt;header class="header"&gt;
+        Header
+        &lt;h4&gt;
+        source:  codercoder.com    
+        &lt;/h4&gt;
+    &lt;/header&gt;
+    &lt;!-- Hero --&gt;
+    &lt;section class="hero"&gt;
+        Hero
+        &lt;p&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sumenda potius quam expetenda. Nihil opus est exemplis hoc facere longius.
+        &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;div class="flex-container wrapper"&gt;
+        &lt;!-- Content --&gt;
+        &lt;section class="content"&gt;
+        Content
+        &lt;p&gt;
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sumenda potius quam expetenda. Nihil opus est exemplis hoc facere longius. At Zeno eum non beatum modo, sed etiam divitem dicere ausus est. Nunc ita separantur, ut disiuncta sint, quo nihil potest esse perversius. Itaque quantum adiit periculum! ad honestatem enim illum omnem conatum suum referebat, non ad voluptatem. Ergo id est convenienter naturae vivere, a natura discedere. Esse enim quam vellet iniquus iustus poterat inpune. Tu enim ista lenius, hic Stoicorum more nos vexat. Duo Reges: constructio interrete.
+        &lt;/p&gt;
+        &lt;p&gt;
+            Quam ob rem tandem, inquit, non satisfacit? Haec quo modo conveniant, non sane intellego. Ita ceterorum sententiis semotis relinquitur non mihi cum Torquato, sed virtuti cum voluptate certatio. Tubulum fuisse, qua illum, cuius is condemnatus est rogatione, P. Quem ad modum quis ambulet, sedeat, qui ductus oris, qui vultus in quoque sit? Miserum hominem! Si dolor summum malum est, dici aliter non potest. Quo tandem modo? Ex rebus enim timiditas, non ex vocabulis nascitur. Deinde prima illa, quae in congressu solemus: Quid tu, inquit, huc? Quod eo liquidius faciet, si perspexerit rerum inter eas verborumne sit controversia.
+        &lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- Sidebar --&gt;
+        &lt;aside class="sidebar"&gt;
+        Sidebar                
+        &lt;p&gt;
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sumenda potius quam expetenda. Nihil opus est exemplis hoc facere longius. At Zeno eum non beatum modo, sed etiam divitem dicere ausus est. Nunc ita separantur, ut disiuncta sint, quo nihil potest esse perversius. Itaque quantum adiit periculum!
+        &lt;/p&gt;
+        &lt;/aside&gt;
+    &lt;/div&gt;
+    &lt;!-- Footer --&gt;
+    &lt;footer class="footer"&gt;
+        Footer                
+        &lt;p&gt;
+        Esse enim quam vellet iniquus iustus poterat inpune. Tu enim ista lenius, hic Stoicorum more nos vexat. Duo Reges: constructio interrete.
+        &lt;/p&gt;
+        &lt;br&gt;
+        &lt;p&gt;
+
+
+
+            
+        &lt;/p&gt;
+    &lt;/footer&gt;
+
+
+&lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+            </pre>
+         </footer>
+
+
+      </main>
+   </body>
