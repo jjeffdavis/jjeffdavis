@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<!--- css.html --->
+<head>
+  <title>css.html</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis">
+<style>
+  html {
+	color: #fff;
+    background-color: #013;
+}
+
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;  /* forces scrunch together, also leaves
+                       unlimited dead space on the right. */
+  background-color: #000;
+}
+
+.flex-container > div {
+  /* all divs under the flex container div 
+  get all of  the following properties: */
+
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.red {
+  background-color: #e33;
+}
+.green {
+  background-color: #163;
+}
+.blue {
+  background-color: #007;
+}
+.gold {
+  background-color: #ffd255;
+}
+</style>
+</head>
+
+<body>
+<h1>Flexible Boxes</h1>
+
+<p>Try to resize the browser window.</p>
+<p>A container with "flex-wrap: nowrap;" will never wrap its items.</p>
+
+<div class="flex-container">
+  <div class="red">1</div>
+  <div class="blue">2</div>
+  <div class="green">3</div>  
+  <div class="gold">4</div>
+  <div class="red">5</div>
+  <div class="blue">6</div>
+  <div class="green">7</div>  
+  <div class="gold">8</div>
+
+</div>
+
+
+
+</body>
+</html>

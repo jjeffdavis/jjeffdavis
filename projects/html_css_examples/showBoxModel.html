@@ -16,25 +16,50 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis">
 
     <style>
+
+    .gump {   /* testing */
+      background-color: #f60;
+      width: 320px;
+      padding: 20px ; /*no color allowed, consider using clip */
+      border: 5px dashed bisque ;
+      margin: 0;
+      margin: 50px;  /*no color allowed */
+      background-clip: padding-box;
+      background-clip: content-box;
+    }
+
+    /* the * entity select covers text mostly; the overall page is handled by the  background-color set in body*/
+/*    * {  
+      background-color: #f50;
+      color: #fed;
+    }
+    */
     html { box-sizing:border-box;}
     *, *:before, *:after { box-sizing:inherit;}
 
     body {
         font-family: Quicksand, Dosis, sans-serif; 
+        background-color: #003;
+        color: bisque;
     }
-    div {
+    .container {
     background-color: lightgrey;
-    width: 300px;
+    width: 500px; /* increasing width also increases container contents such as images */
     border: 15px solid green;
     padding: 50px;
     margin: 15px;
     }
-    .bm {  /* inherits from div */
-    background-color: #fda;
-    border: 15px solid #37a;
+    .cborder {  /* inherits from and overrides .container */
+    background-color: #366;  /* this fills in the contents and padding within 
+    the border */ 
+    border: 15px solid #045;
     padding: 33px;
     }
-
+    .ooutline {
+      margin: 75px; /* forces external border to outline */
+      border: 2px solid black;
+      outline: #fed solid 10px;
+    }
     </style>
 </head>
 
@@ -42,25 +67,67 @@
 
 <body>
 
-<h1>cafe-ennui.com</h1>
+<h1>showBoxModel.com</h1>
 
-<h3>come in.</h3>
+<div class="ooutline">  <!--outline is outside of box model-->
 
-<div class="bm"><h5>you are always welcome.<br>
+<div class="container cborder"><h5>you are always welcome.<br>
 webmaster@cafe-ennui.com</h5></div>
 <br>
-<div class="bm"><img class="img-fluid" src="img/boxmodel.jpg" alt="fix me"></div>
+</div>
+
+<div class="container cborder">
+  <img class="img-fluid" src="/root-ennui/img/flatcadillac.jpg" alt="fix me">
+</div>
 <br>
-<div class="bm"><img class="img-fluid" src="/img/NewYorker1982.jpg" alt="fix me"></div>
+<div class="container cborder">
+  <img class="img-fluid" src="/root-ennui/img/NewYorker1982.jpg" alt="fix me"></div>
 <br>
 
-<br><br>
+<div class="container cborder">
+  <h2>The Restaurant</h2>
 
+  <p>The Black Goose Bistro offers casual lunch and dinner fare in
+  a hip atmosphere.  The menu changes regularly to highlight
+  the freshest ingredients.</p>
+  <hr />
+  <h2>Catering</h2>
+  <p>You have fun... <s>you'll pay thru the nose </s> <em>we'll handle the cooking.</em>  Black Goose Catering
+  can handle events from snacks for bridge club <s> BORING!  </s> to elegant corporate 
+  fundraisers.<s> BORING!  </s></p>
+  <hr />
+  <h2>Location and Hours</h2>
+  <p>Seekonk, MA;<br />
+  Monday through Thursday 11am to 9pm,<br /> Friday and Saturday,
+  11am to midnight.</p>
+</div>
+
+
+<div class="gump">
+  <h2>The Restaurant</h2>
+
+  <p>The Black Goose Bistro offers casual lunch and dinner fare in
+  a hip atmosphere.  The menu changes regularly to highlight
+  the freshest ingredients.</p>
+  <hr />
+  <h2>Catering</h2>
+  <p>You have fun... <s>you'll pay thru the nose </s> <em>we'll handle the cooking.</em>  Black Goose Catering
+  can handle events from snacks for bridge club <s> BORING!  </s> to elegant corporate 
+  fundraisers.<s> BORING!  </s></p>
+  <hr />
+  <h2>Location and Hours</h2>
+  <p>Seekonk, MA;<br />
+  Monday through Thursday 11am to 9pm,<br /> Friday and Saturday,
+  11am to midnight.</p>
+</div>
+
+
+
+<h3>for help on box model and containers...</h3>
 <a href="https://codinglead.co/css/what-is-the-css-box-model" target="_blank"> CSS Box Model</a>
 <br>
 <a href="https://www.w3schools.com/css/css_boxmodel.asp" target="_blank">CSS Box Model</a>
 <br>
 <a href="https://www.w3schools.com/css/css_outline.asp" target="_blank">CSS Outline</a>
-
 </body>
 </html>
