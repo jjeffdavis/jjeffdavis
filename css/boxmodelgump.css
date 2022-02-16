@@ -1,0 +1,71 @@
+
+
+/*  new.css */
+
+
+
+    .moregump {   /* the table is left justified.  The free text expands according to the size of the box, being naturally centered by the equal margin on both sides. */
+      background-color: #639;
+      width: 600px;
+      padding: 120px ; /*no color allowed, consider using clip */
+      border: 25px dashed bisque ;
+      margin: 0;
+      margin: 60px;  /*no color allowed */
+      background-clip: padding-box;
+      background-clip: content-box;
+      background-clip: border-box;
+    }
+
+
+    .gump {   /* testing */
+      background-color: #53a;
+      width: 520px;
+      padding: 20px ; /*no color allowed, consider using clip */
+      border: 5px dashed bisque ;
+      margin: 0;
+      margin: 50px;  /*no color allowed */
+      background-clip: padding-box;
+      background-clip: content-box;
+    }
+
+
+    /* the * entity select covers text mostly; the overall page is handled by the  background-color set in body*/
+/*    * {  
+      background-color: #f50;
+      color: #fed;
+    }
+    */
+    html { box-sizing:border-box;}
+    *, *:before, *:after { box-sizing:inherit;}
+
+    body {
+        font-family: Quicksand, Dosis, sans-serif; 
+        background-color: #003;
+        color: bisque;
+    }
+    .ccyan {
+    background-color: lightgrey;
+    width: 500px; /* increasing width also increases ccyan contents such as images */
+    border: 15px solid green;
+    padding: 50px;
+    margin: 15px;
+    }
+    .cborder {  /* inherits from and overrides .ccyan */
+    background-color: #366;  /* this fills in the contents and padding within 
+    the border */ 
+    border: 15px solid #045;
+    padding: 33px;
+    }
+    .ooutline {
+      margin: 75px; /* forces external border to outline */
+      border: 2px solid black;
+      outline: #fed solid 10px;
+    }
+
+    .table-center, .box-center-on-page {     /* for centering tables.  It also centers a box into the center of the page. */
+  margin-left: auto;
+  margin-right: auto;
+}
+.force-center, .text-center { /* for centering just about everything else */
+    text-align: center;
+}

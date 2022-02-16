@@ -12,14 +12,27 @@
     background-color: #013;
 }
 
+.punch {
+  width: 400px;
+  height: 200px;
+  border: 1px solid #c3c3c3;
+  display: flex;
+  flex-wrap: wrap;
+}
 
+.punch div {
+  width: 150px;
+  height: 50px;
+}
 .flex-container {
   display: flex;
   flex-wrap: nowrap;  /* forces scrunch together, also leaves
                        unlimited dead space on the right. */
   background-color: #000;
 }
-
+.flex-container-wrap {
+  flex-wrap: wrap;  
+}
 .flex-container > div {
   /* all divs under the flex container div 
   get all of  the following properties: */
@@ -63,7 +76,33 @@
 
 </div>
 
+<h1>Flexible Boxes</h1>
 
+<p>Try to resize the browser window.</p>
+<p>A container with "flex-wrap: wrap;" will  wrap its items.</p>
+
+<div class="flex-container-wrap">
+  <div class="red">1</div>
+  <div class="blue">2</div>
+  <div class="green">3</div>  
+  <div class="gold">4</div>
+  <div class="red">5</div>
+  <div class="blue">6</div>
+  <div class="green">7</div>  
+  <div class="gold">8</div>
+
+</div>
+
+<h1>The flex-wrap Property</h1>
+
+<div class="punch">
+  <div style="background-color:coral;">A</div>
+  <div style="background-color:lightblue;">B</div>
+  <div style="background-color:khaki;">C</div>
+  <div style="background-color:pink;">D</div>
+  <div style="background-color:lightgrey;">E</div>
+  <div style="background-color:lightgreen;">F</div>
+</div>
 
 </body>
 </html>

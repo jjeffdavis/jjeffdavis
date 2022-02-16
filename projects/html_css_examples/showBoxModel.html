@@ -14,53 +14,8 @@
   
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis">
+  <link rel="stylesheet" href="/root-ennui/css/boxmodelgump.css">
 
-    <style>
-
-    .gump {   /* testing */
-      background-color: #f60;
-      width: 320px;
-      padding: 20px ; /*no color allowed, consider using clip */
-      border: 5px dashed bisque ;
-      margin: 0;
-      margin: 50px;  /*no color allowed */
-      background-clip: padding-box;
-      background-clip: content-box;
-    }
-
-    /* the * entity select covers text mostly; the overall page is handled by the  background-color set in body*/
-/*    * {  
-      background-color: #f50;
-      color: #fed;
-    }
-    */
-    html { box-sizing:border-box;}
-    *, *:before, *:after { box-sizing:inherit;}
-
-    body {
-        font-family: Quicksand, Dosis, sans-serif; 
-        background-color: #003;
-        color: bisque;
-    }
-    .container {
-    background-color: lightgrey;
-    width: 500px; /* increasing width also increases container contents such as images */
-    border: 15px solid green;
-    padding: 50px;
-    margin: 15px;
-    }
-    .cborder {  /* inherits from and overrides .container */
-    background-color: #366;  /* this fills in the contents and padding within 
-    the border */ 
-    border: 15px solid #045;
-    padding: 33px;
-    }
-    .ooutline {
-      margin: 75px; /* forces external border to outline */
-      border: 2px solid black;
-      outline: #fed solid 10px;
-    }
-    </style>
 </head>
 
 
@@ -71,20 +26,20 @@
 
 <div class="ooutline">  <!--outline is outside of box model-->
 
-<div class="container cborder"><h5>you are always welcome.<br>
+<div class=" ccyan   cborder"><h5>you are always welcome.<br>
 webmaster@cafe-ennui.com</h5></div>
 <br>
 </div>
 
-<div class="container cborder">
+<div class=" ccyan  cborder">
   <img class="img-fluid" src="/root-ennui/img/flatcadillac.jpg" alt="fix me">
 </div>
 <br>
-<div class="container cborder">
+<div class=" ccyan   cborder">
   <img class="img-fluid" src="/root-ennui/img/NewYorker1982.jpg" alt="fix me"></div>
 <br>
 
-<div class="container cborder">
+<div class=" ccyan  text-center cborder">
   <h2>The Restaurant</h2>
 
   <p>The Black Goose Bistro offers casual lunch and dinner fare in
@@ -100,30 +55,69 @@ webmaster@cafe-ennui.com</h5></div>
   <p>Seekonk, MA;<br />
   Monday through Thursday 11am to 9pm,<br /> Friday and Saturday,
   11am to midnight.</p>
+  <hr>
+  <h4>.text-center</h4>
+  <p> class .text-center forces text to center rather than go to left extreme.</p>
 </div>
 
 
 <div class="gump">
-  <h2>The Restaurant</h2>
+  <h2> this div using class selector .gump.</h2>
 
-  <p>The Black Goose Bistro offers casual lunch and dinner fare in
-  a hip atmosphere.  The menu changes regularly to highlight
-  the freshest ingredients.</p>
-  <hr />
+  <p>This section is followed by an [hr] thematic break, where [hr] stands for horizontal rule, a break with a horizontal line.</p>
+  <hr>
   <h2>Catering</h2>
-  <p>You have fun... <s>you'll pay thru the nose </s> <em>we'll handle the cooking.</em>  Black Goose Catering
-  can handle events from snacks for bridge club <s> BORING!  </s> to elegant corporate 
-  fundraisers.<s> BORING!  </s></p>
-  <hr />
-  <h2>Location and Hours</h2>
-  <p>Seekonk, MA;<br />
-  Monday through Thursday 11am to 9pm,<br /> Friday and Saturday,
-  11am to midnight.</p>
+  <p>You have fun... <s>you'll pay thru the nose </s> <em>we'll handle the cooking.</em>  <s> xxx  </s></p>
+  <p>xxx</p>
+
+  <hr>
+  
+  <h2>features of class selector gump:</h2>
+  <p>features<br />
+  being clipped to content, the background color of the page fills the border and padding areas.<br>
+  the text left justifies and text flows to the size of the box content.</p>
 </div>
 
 
 
-<h3>for help on box model and containers...</h3>
+<div class="moregump box-center-on-page">
+<h1>Class Selector .moregump</h1>
+<table>
+<tr>
+  <th>Album</th>
+  <th>Year</th>
+</tr>
+<tr>
+  <td>Rubber Soul</td>
+  <td>1965</td>
+</tr>
+<tr>
+  <td>Revolver</td>
+  <td>1966</td>
+</tr>
+<tr>
+  <td>Sgt. Pepper's</td>
+  <td>1967</td>
+</tr>
+<tr>
+  <td>The White Album</td>
+  <td>1968</td>
+</tr>
+<tr>
+  <td>Abbey Road</td>
+  <td>1969</td>
+</tr>
+</table>
+
+<h2>------------------<br>text area below table</h2>
+<p>my class selector is moregump.<br>
+  the table is left justified to the padding size.  The free text expands according to the size of the box content, being naturally centered by the equal margin on both sides.</p>
+</div>
+
+<br><br>
+
+
+<h3>for help on box model and  ccyans...</h3>
 <a href="https://codinglead.co/css/what-is-the-css-box-model" target="_blank"> CSS Box Model</a>
 <br>
 <a href="https://www.w3schools.com/css/css_boxmodel.asp" target="_blank">CSS Box Model</a>
