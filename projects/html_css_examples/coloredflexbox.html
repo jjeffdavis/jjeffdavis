@@ -6,6 +6,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis">
+  <script src="/root-ennui/js/coloredflexbox.js" ></script> 
 <style>
   html {
 	color: #fff;
@@ -13,16 +14,16 @@
 }
 
 .punch {
-  width: 400px;
-  height: 200px;
-  border: 1px solid #c3c3c3;
+  width: 700px;
+  height: 250px;
+  border: 10px dashed  #c3c3c3;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .punch div {
   width: 150px;
-  height: 50px;
+  height: 150px;
 }
 .flex-container {
   display: flex;
@@ -93,15 +94,21 @@
 
 </div>
 
-<h1>The flex-wrap Property</h1>
+<h1>The flex-container nowrap Property</h1>
 
-<div class="punch">
+<div class=" flex-container">
   <div style="background-color:coral;">A</div>
   <div style="background-color:lightblue;">B</div>
   <div style="background-color:khaki;">C</div>
   <div style="background-color:pink;">D</div>
   <div style="background-color:lightgrey;">E</div>
   <div style="background-color:lightgreen;">F</div>
+  <div style="background-color:coral;">A2</div>
+  <div style="background-color:lightblue;">B2</div>
+  <div style="background-color:khaki;">C2</div>
+  <div style="background-color:pink;">D2</div>
+  <div style="background-color:lightgrey;">E2</div>
+  <div style="background-color:lightgreen;">F2</div>
 </div>
 
 </body>

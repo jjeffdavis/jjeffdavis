@@ -1,4 +1,4 @@
-//config.php
+//config.pdo.php
 <?php
 echo "enter config.php";
 define('DB_NAME', 'test_company');
