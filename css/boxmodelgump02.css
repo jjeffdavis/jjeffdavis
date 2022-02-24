@@ -1,9 +1,16 @@
 
 
 /*  new.css */
+.clip-content{
+  background-clip: content-box;
+  }
+.clip-padding{
+background-clip: padding-box;
+}
 
-
-
+.clip-border{
+background-clip: border-box;
+}
     .moregump {   /* the table is left justified.  The free text expands according to the size of the box, being naturally centered by the equal margin on both sides. */
       background-color: #639;
       width: 600px;
@@ -11,9 +18,7 @@
       border: 25px dashed bisque ;
       margin: 0;
       margin: 60px;  /*no color allowed */
-      background-clip: padding-box;
-      background-clip: content-box;
-      background-clip: border-box;
+
     }
 
 
@@ -23,12 +28,23 @@
       width: 520px;
 */
       padding: 20px ; /*no color allowed, consider using clip */
-      border: 5px dashed bisque ;
+      border: 8px dashed bisque ;
       margin: 0;
       margin: 50px;  /*no color allowed */
       background-clip: padding-box;
+      /*
       background-clip: content-box;
+      */
     }
+
+
+    .ccyan {  /* inherits from and overrides .ccyan */
+      background-color: #366;  /* this fills in the contents and padding within 
+      the border */ 
+      border: 15px dashed #045;
+      padding: 33px;
+      margin: 15px;
+      }
 
 
     /* the * entity select covers text mostly; the overall page is handled by the  background-color set in body*/
@@ -45,14 +61,24 @@
         background-color: #003;
         color: bisque;
     }
- 
-    .ccyan {  /* inherits from and overrides .ccyan */
-    background-color: #366;  /* this fills in the contents and padding within 
-    the border */ 
-    border: 15px solid #045;
-    padding: 33px;
-    margin: 15px;
+a {
+  font-size: 140%;
+}
+    a:link {
+      color: #ffffff;
     }
+    a:visited{
+      color: #ffddaa;
+      font-size: 150%;
+     }
+     a:hover {
+       color: #ffcc88;
+     }
+ a:active{
+  color: blue;
+
+ }
+
     .ooutline {
       margin: 75px; /* forces external border to outline */
       border: 2px solid black;
@@ -66,6 +92,7 @@
 .force-center, .text-center { /* for centering just about everything else */
     text-align: center;
 }
+
 .image-center{
 
 
@@ -73,11 +100,28 @@
   margin-left: auto;
   margin-right: auto;
   width: 92%;
+  margin-right: 20px;
+  width:20%;
+
 
 }
+.block-float-right {
+  float: right;
+  width: 250px;
+  margin-left: 20px;
+  
+  }
 .float-left{
 float: left;
+margin-right: 20px;
 }
 .float-right{
 float: right;
+}
+.overline {
+  text-decoration: overline;
+}
+.underline {
+
+  text-decoration: underline;
 }
