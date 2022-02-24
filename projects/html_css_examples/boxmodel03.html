@@ -24,12 +24,14 @@
     <button class="block" onclick="window.location.href='/root-ennui/projects/notwaving/index.2022.0221.html';">
       click here to return to page 1</button>
 
-<h1 class="">showBoxModelNN.html</h1>
+<h1 class="">this page contains various experiments using the box model as well as floating text. 
+  (the tables have been copied from page 1).<hr>
+  Go ahead, stretch and shrink the width of this web page: many of the features are responsive.</h1>
 <div class="ooutline">  <!--outline is outside of box model-->
-<h3> .ooutline .ccyan .clip-content</h3>
-<div class=" ccyan clip-content "><h4>this box clips background to content.  hence the padding, border and margin
+<h3> .ooutline .cbox .clip-content</h3>
+<div class=" cbox clip-content "><h4>this box clips background to content.  hence the padding, border and margin
    take the background color of the page.<br> 
-    the content takes the background color of the box, whose css features are given by class .ccyan.<br>
+    the content takes the background color of the box, whose css features are given by class .cbox.<br>
    this example also has a white outline, which is completely outside of the box model.  it is given by class .ooutline. <br>
   this is the only box on the page with an outline outside/beyond the box model.<br>
 the outline has its own border and margin.</h4>
@@ -37,11 +39,11 @@ the outline has its own border and margin.</h4>
 <br>
 </div>
 
-<div class=" ccyan  clip-padding">
-  <h2> .ccyan .clip-padding </h2>
+<div class=" cbox  clip-padding">
+  <h2> .cbox .clip-padding .block-float-left</h2>
 
-  <blockquote class="block-float-left">I was trying to float the picture left, and this text right<br>
-    I believe I will have to research responsive css flexbox or css grid.  For future research.<br>
+  <blockquote class="block-float-left">this text floats left.  it only works when the page is fairly wide.<br>
+    This should be replaced with responsive css flexboxes or css grid.  For future research.<br>
   </blockquote>
 
   <img class="" src="/root-ennui/img/flatcadillac.jpg" alt="fix me">
@@ -50,19 +52,19 @@ the outline has its own border and margin.</h4>
 
   
 </div>
-<hr>
+<br>
 
 
 
-<div class=" ccyan clip-border max-width-400 ">
-  <h2> .ccyan .clip-border <br> .max-width-400</h2>
+<div class=" cbox clip-border max-width-400 ">
+  <h2> .cbox .clip-border <br> .max-width-400</h2>
   <img class="image-center " src="/root-ennui/img/americanGothic.small.jpg" alt="fix me"></div>
 <br>
 
 
 
-<div class=" ccyan ">
-  <h2> .ccyan </h2>
+<div class=" cbox ">
+  <h2> .cbox block-float-right</h2>
   <img class="" src="/root-ennui/img/gratefulDead.jpeg" alt="fix me">
 
   <blockquote class="block-float-right">.block-float-right -- this works at larger page widths but not smaller.<br>
@@ -72,12 +74,15 @@ the outline has its own border and margin.</h4>
 <br>
 
 
-<hr>
+<br>
 
-<div class=" ccyan  text-center ">
-  <h2> class .text-center </h2> 
-  <h2>guarantees text centering.</h2>
-  <p> note in the table below, the table is left centered, but the text centers within column.</p>
+<div class=" cbox  text-center ">
+  <h2> .cbox .text-center </h2> 
+  <h4>class .text-center guarantees text centering.  The picture and text below are in a table.  Curiously, this works 
+    much better than the attempts to float text in the boxes above.<br>
+    The table left centers, but curiously the text centers within column.<br>
+  Ideally, I would modify this site to use the responsive css flexbox and grids.</h4>
+  <p> (this table below is the same data as on page 1)</p>
   <table class=""> <!---  more about me table-->
     <tr>  <!--   1st row ... headings only. -->
       <th>..not me..</th>
@@ -147,17 +152,18 @@ the outline has its own border and margin.</h4>
 </div>
 
 
-<div class="ccyan clip-padding">
-  <h2> this div using class selector .cblue.</h2>
+<div class="cbox clip-padding">
+  <h2> .cbox .clip-padding</h2>
 
   <p>this box clipped to padding<br>
   text centers left by default, .text-center is not invoked.
-  <br>???? why does this box with table center on page while the example above doesn't???<br></p>
+  </p>
 
 
-    <hr>
+    <br>
 
     <h2>Some of my favorite things</h2>
+    <p> (this table below is the same data as on page 1)</p>
   <table class=""><!---  favorite things table-->
     <tr>  <!--   1st row ...-->
         <th>My Favorite Music</th>
@@ -243,7 +249,7 @@ the outline has its own border and margin.</h4>
 <br><br>
 
 
-<h3 class=" overline ">for help on box model and  ccyans...</h3>
+<h2 class=" overline bold-text">for help on css box model and css outline.......</h2>
 <a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_background-clip" target="_blank">
   Learn about background-clip,</a><br><br>
 <a href="https://codinglead.co/css/what-is-the-css-box-model" target="_blank">Learn about the css box model</a>

@@ -35,8 +35,8 @@ background-clip: border-box;
 
 
 
-    .ccyan {  /* inherits from and overrides .ccyan */
-      background-color: #244;  /* this fills in the contents and padding within 
+    .cbox {  /* inherits from and overrides .ccyan */
+      background-color: #183333;  /* this fills in the contents and padding within 
       the border */ 
       border: 15px dashed bisque;
       padding: 33px;
@@ -121,3 +121,8 @@ margin-left: 20px;
 
   text-decoration: underline;
 }
+.bold-text {
+
+    font-weight: 800;
+  }
+
