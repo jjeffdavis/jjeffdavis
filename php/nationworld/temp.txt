@@ -1,0 +1,21 @@
+
+MariaDB [world]> show columns in co
++----------------+------------------------+------+-----+---------+-------+
+| Field          | Type                   | Null | Key | Default | Extra |
++----------------+------------------------+------+-----+---------+-------+
+| Code           | char(3)                | NO   | PRI |         |       |
+| Name           | char(52)               | NO   |     |         |       |
+| Continent      | enum('Asia','Eurrica') | NO   |     | Asia    |       |
+| Region         | char(26)               | NO   |     |         |       |
+| SurfaceArea    | float(10,2)            | NO   |     | 0.00    |       |
+| IndepYear      | smallint(6)            | YES  |     | NULL    |       |
+| Population     | int(11)                | NO   |     | 0       |       |
+| LifeExpectancy | float(3,1)             | YES  |     | NULL    |       |
+| GNP            | float(10,2)            | YES  |     | NULL    |       |
+| GNPOld         | float(10,2)            | YES  |     | NULL    |       |
+| LocalName      | char(45)               | NO   |     |         |       |
+| GovernmentForm | char(45)               | NO   |     |         |       |
+| HeadOfState    | char(60)               | YES  |     | NULL    |       |
+| Capital        | int(11)                | YES  |     | NULL    |       |
+| Code2          | char(2)                | NO   |     |         |       |
++----------------+------------------------+------+-----+---------+-------+
