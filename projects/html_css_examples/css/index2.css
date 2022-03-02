@@ -1,0 +1,118 @@
+/*  index2.css */
+
+.bigfont {
+  font-size: 300%;
+  }
+
+.clip-content {
+	background-clip: content-box;
+}
+.clip-padding {
+	background-clip: padding-box;
+}
+.clip-border {
+	background-clip: border-box;
+}
+.cbox {
+	background-color: #183333;
+	/* this fills in the contents and padding within 
+      the border unless clipped*/
+	border: 15px dashed bisque;
+	padding: 33px;
+	margin: 35px;
+}
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+body {
+	font-family: Quicksand, Dosis, sans-serif;
+	background-color: #122424;
+	color: bisque;
+}
+a {
+	font-size: 140%;
+}
+a:link {
+	color: #ffffff;
+}
+a:visited {
+	color: #997755;
+}
+a:hover {
+	color: #ffcc88;
+}
+a:active {
+	color: blue;
+}
+.ooutline {
+	margin: 75px;
+	/* forces external border to outline */
+	border: 2px solid black;
+	outline: #fed solid 10px;
+}
+.table-center, .box-center-on-page {
+	/* for centering tables.  It also centers a box into the center of the page. */
+	margin-left: auto;
+	margin-right: auto;
+}
+.force-center, .text-center {
+	/* for centering just about everything else */
+	text-align: center;
+}
+.max-width-400 {
+	max-width: 400px;
+}
+.image-center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-right: 20px;
+	width: 90%;
+}
+.block-float-right {
+	float: right;
+	width: 250px;
+	margin-left: 20px;
+}
+.block-float-left {
+	float: left;
+	width: 250px;
+	margin-right: 20px;
+}
+.float-left {
+	float: left;
+	margin-right: 20px;
+}
+.float-right {
+	float: right;
+	margin-left: 20px;
+}
+.overline {
+	text-decoration: overline;
+}
+.underline {
+	text-decoration: underline;
+}
+.bold-text {
+	font-weight: 800;
+}
+
+.block {
+	display: block;
+	height: 50px;
+	width: 99%;
+	border: none;
+	background-color:gainsboro;
+	color: black;
+	padding: 14px 28px;
+	font-size: 24px;
+	cursor: pointer;
+	text-align: center;
+}
+.block:hover {
+	background-color: black;
+	color: gainsboro;
+}

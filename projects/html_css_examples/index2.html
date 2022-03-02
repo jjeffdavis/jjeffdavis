@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<!---  index2.html -->
+<head>
+	<title>show box model</title>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+	<link href="css/index2.css" rel="stylesheet">
+</head>
+<body>
+	<button class="block" onclick="window.location.href='/root-ennui/projects/html_css_examples/index1.html';">
+		click here to go to page 1</button>
+		<br><br>
+	<img alt="fix me" class="image-center" src="/root-ennui/img/prayforukraine.jpg">
+	<br><br>
+
+  <h1 class="bigfont">Not <sup>waving</sup> but <sub>drowning</sub>..............Jeff Davis CS130</h1>
+
+
+	<h3 class="">this page contains various experiments using the box model as well as floating text. 
+    (the tables have been copied from page 1).</h3>
+<br>
+	<h1>Go ahead, stretch and shrink the width of this web page: many of the features are responsive.</h1>
+	<div class="ooutline">
+		<!--outline is outside of box model-->
+		<h3>.ooutline .cbox .clip-content</h3>
+		<div class=" cbox clip-content">
+			<h4>this box clips background to content. hence the padding, border and margin take the background color of the page.<br>
+			the content takes the background color of the box, whose css features are given by class .cbox.<br>
+			this example also has a white outline, which is completely outside of the box model. it is given by class .ooutline.<br>
+			this is the only box on the page with an outline outside/beyond the box model.<br>
+			the outline has its own border and margin.</h4>
+		</div><br>
+	</div>
+	<div class=" cbox clip-padding">
+	<h2>.cbox .clip-padding .block-float-left</h2>
+	<blockquote class="block-float-left">
+		this text floats left. it only works when the page is fairly wide.<br>
+		This should be replaced with responsive css flexboxes or css grid. For future research.<br>
+	</blockquote><img alt="fix me" class="" src="/root-ennui/img/flatcadillac.jpg"></div><br>
+	<div class=" cbox clip-border max-width-400">
+	<h2>.cbox .clip-border<br>
+	.max-width-400</h2><img alt="fix me" class="image-center" src="/root-ennui/img/americanGothic.small.jpg"></div><br>
+	<div class=" cbox">
+		<h2>.cbox .block-float-right</h2><img alt="fix me" class="" src="/root-ennui/img/gratefulDead.jpeg">
+		<blockquote class="block-float-right">
+			.block-float-right -- this works at larger page widths but not smaller.<br>
+			responsive css flexbox or responsive css grid needed.<br>
+		</blockquote>
+	</div><br>
+	<br>
+	<div class=" cbox text-center">
+		<h2>.cbox .text-center</h2>
+		<h4>class .text-center guarantees text centering. The picture and text below are in a table. Curiously, this works much better than the attempts to float text in the boxes above.<br>
+		The table left centers, but curiously the text centers within column.<br>
+		Ideally, I would modify this site to use the responsive css flexbox and grids.</h4>
+		<p>(this table below is the same data as on page 1)</p>
+		<table class="">
+			<!---  more about me table-->
+			<tr>
+				<!--   1st row ... headings only. -->
+				<th>..not me..</th>
+				<th>......My Contact Info.....</th>
+			</tr>
+			<tr>
+				<!--   2nd row ... actual 3 cols of content -->
+				<td><!-- content column 1 --></td>
+			</tr>
+			<tbody>
+				<tr>
+					<td>
+						<!-- column for freckles-->
+						<div class="img-container"><img alt="fix me" class="image-center" src="/root-ennui/img/freckleboy.jpg"></div>
+					</td>
+					<td>
+						<!-- column for my contacts-->
+						<!-- contact info table ... a table within a column of another table -->
+						<table class="general-table table-center">
+							<thead>
+								<tr>
+									<th>contact</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="header-row">
+									<td>Home Phone</td>
+									<td>760.666.1234</td>
+								</tr>
+								<tr class="data-row">
+									<td>Cell Phone</td>
+									<td>312.421.5650</td>
+								</tr>
+								<tr class="data-row">
+									<td>Emergency Contact...</td>
+									<td>212.323.1275</td>
+								</tr>
+								<tr class="data-row">
+									<td>Email</td>
+									<td>jjeffdavis@hotmail.com</td>
+								</tr>
+							</tbody>
+						</table>
+					</td><!-- end  column for contacts -->
+				</tr><!-- end second row -->
+			</tbody>
+		</table>
+	</div>
+	<div class="cbox clip-padding">
+		<h2>.cbox .clip-padding</h2>
+		<p>this box clipped to padding<br>
+		text centers left by default, .text-center is not invoked.</p><br>
+		<h2>Some of my favorite things</h2>
+		<p>(this table below is the same data as on page 1)</p>
+		<table class="">
+			<!---  favorite things table-->
+			<tr>
+				<!--   1st row ...-->
+				<th>My Favorite Music</th>
+				<th>My Favorite Flicks</th>
+				<th>Some Other Favorites</th>
+			</tr>
+			<tr>
+				<!--   2nd row of table... ...-->
+				<td>
+					<!-- column 1 -->
+					<dl>
+						<dt>19th Century</dt>
+						<dd>Chopin - Etudes, op 10 & op 25</dd>
+						<dd>Brahms - 6 Piano Pieces op 118</dd>
+						<dd>De Falla, Harpsichord Concerto</dd>
+						<dd></dd>
+						<dt>Rock</dt>
+						<dd>Grateful Dead, Europe '72</dd>
+						<dd>Jefferson Airplane, Surrealist Pillow</dd>
+						<dd>Traffic, Welcome to the Canteen</dd>
+						<dd>Blind Faith, (untitled)</dd>
+						<dd>Crosby, Stills, Nash & Young, Déjà Vu</dd>
+						<dd>Pink Floyd, Echoes</dd>
+						<dd>Pink Floyd, Dark Side of the Moon</dd>
+						<dd>The Who, Who's Next</dd>
+						<dt>World, Jazz, Other</dt>
+						<dd>Astor Piazzolla, Concierto Para Bandoneón</dd>
+						<dd>Gato Barbieri, Last Tango in Paris (soundtrack)</dd>
+						<dd>Leonard Bernstein, West Side Story(soundtrack)</dd>
+						<dd>Jacques Brel, Ne Me Quitte Pas</dd>
+					</dl>
+				</td>
+				<td>
+					<!-- column 2-->
+					<ol>
+						<li>Persona (Ingmar Bergman)</li>
+						<li>Ida (Paweł Pawlikowski)</li>
+						<li>Chinatown (Roman Polanski)</li>
+						<li>Vertigo (Alfred Hitchcock)</li>
+						<li>Breathless (Jean-Luc Godard)</li>
+						<li>Raise the Red Lantern (Zhang Yimou)</li>
+						<li>La Jetée (Chris Marker)</li>
+						<li>Another Woman (Woody Allen)</li>
+						<li>All About Eve (Joseph L Mankewicz)</li>
+					</ol>
+				</td>
+				<td>
+					<!-- column 3 -->
+					<dl>
+						<dt>Poems</dt>
+						<dd>Not Waving But Drowning, Stevie Smith</dd>
+						<dd>Soneto (Procura desmentir los elogios...), Sor Juana Inés de la Cruz</dd>
+						<dt>Painting</dt>
+						<dd>American Gothic, Grant Wood</dd>
+						<dd>Guernica, Pablo Picasso</dd>
+						<dt>Spectator Sports</dt>
+						<dd>Skateboarding</dd>
+						<dt>Pets</dt>
+						<dd>Cats</dd>
+						<dd>Siberian Huskies, Alaskan Malamutes</dd>
+					</dl>
+				</td>
+			</tr><!-- end second row -->
+			<tr>
+				<td></td>
+			</tr>
+		</table>
+	</div><br>
+	<br>
+	<h2 class=" overline bold-text">for help on css box model and css outline.......</h2><a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_background-clip" target="_blank">Learn about background-clip,</a><br>
+	<br>
+	<a href="https://codinglead.co/css/what-is-the-css-box-model" target="_blank">Learn about the css box model</a><br>
+	<br>
+	<a href="https://www.w3schools.com/css/css_boxmodel.asp" target="_blank">More about the css box model</a><br>
+	<br>
+	<a href="https://www.w3schools.com/css/css_outline.asp" target="_blank">Learn about the CSS outline. Note: Outline differs from borders! Unlike border, the outline is drawn outside the element's border, and may overlap other content.</a><br>
+	<br>
+	<button class="block" onclick="window.location.href='/root-ennui/projects/html_css_examples/index1.html';">
+		click here to go to page 1</button>
+	<br> <br>
+</body>
+</html>
