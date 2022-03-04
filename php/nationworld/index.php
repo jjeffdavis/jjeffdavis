@@ -33,7 +33,7 @@ from
     nation.regions nr,
     nation.continents nk
 where
-    nk.name = 'South America' AND
+    nk.name = 'Europe' AND
     nk.continent_id = nr.continent_id AND
     nr.region_id = nc.region_id AND
     nc.country_code3 = wc.code AND
@@ -42,7 +42,7 @@ where
 order by nc.name";
 
 $statement1 = $db->prepare($queryContinent);
-//$statement1->bindValue(':contalp', $contalp);
+
 $statement1->execute();
 
 $dbcountries = $statement1->fetchAll();

@@ -20,41 +20,37 @@ require('database.php');
     </header>
 
     <main>
-
+        <h1>New Country</h1>
         <form action="add_country.php" method="post" id="add_country_form">
 
-            <!--             <label>Category:</label>
-            <select name="category_id">
-                <?php foreach ($categories as $category) : ?>
-                    <option value="<?php echo $category['categoryID']; ?>">
-                        <?php echo $category['categoryName']; ?>
-                    </option>
-                <?php endforeach; ?>
-            </select><br> -->
 
 
+            <label>Code3:</label>
+            <input type="text" name="fcode3"><br>
+
+            <label>Code2:</label>
+            <input type="text" name="fcode2"><br>
 
             <label>Name:</label>
             <input type="text" name="fname"><br>
-            <label>national day:</label>
-            <input type="text" name="fnationalday"><br>
+
             <label>Area:</label>
             <input type="text" name="farea"><br>
-            <label>Code 2:</label>
-            <input type="text" name="fcountrycode2"><br>
-            <label>Code 3:</label>
-            <input type="text" name="fcountrycode3"><br>
-            <label>Region:</label>
-            <input type="text" name="fregion"><br>
+
+            <label>Population:</label>
+            <input type="text" name="fpopulation"><br>
+
+            <label>Government Form:</label>
+            <input type="text" name="fgovernmentform"><br>
 
             <label>&nbsp;</label>
-            <input type="submit" value="Add country"><br>
+            <input type="submit" value="Add Country"><br>
         </form>
-        <p><a href="index.php">View country List</a></p>
+        <p><a href="index.php">View Countries</a></p>
     </main>
 
     <footer>
-        <p>&copy; <?php echo date("Y"); ?> My Little Corner of the World</p>
+        <p>&copy; <?php echo date("Y"); ?>My Little Corner of the World</p>
     </footer>
 </body>
 

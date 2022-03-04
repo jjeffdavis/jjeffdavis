@@ -1,12 +1,6 @@
 <?php
 require('database.php');
-$query = 'SELECT *
-          FROM categories
-          ORDER BY categoryID';
-$statement = $db->prepare($query);
-$statement->execute();
-$categories = $statement->fetchAll();
-$statement->closeCursor();
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,7 +8,7 @@ $statement->closeCursor();
 <!-- the head section -->
 
 <head>
-    <title>My Guitar Shop</title>
+    <title>add country</title>
     <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 
@@ -22,39 +16,41 @@ $statement->closeCursor();
 
 <body>
     <header>
-        <h1>Product Manager</h1>
+        <h1>Add Country</h1>
     </header>
 
     <main>
-        <h1>Add Product</h1>
-        <form action="add_product.php" method="post" id="add_product_form">
+        <h1>New Country</h1>
+        <form action="add_country.php" method="post" id="add_country_form">
 
-            <label>Category:</label>
-            <select name="category_id">
-                <?php foreach ($categories as $category) : ?>
-                <option value="<?php echo $category['categoryID']; ?>">
-                    <?php echo $category['categoryName']; ?>
-                </option>
-                <?php endforeach; ?>
-            </select><br>
 
-            <label>Code:</label>
-            <input type="text" name="code"><br>
+
+            <label>Code3:</label>
+            <input type="text" name="fcode3"><br>
+
+            <label>Code2:</label>
+            <input type="text" name="fcode2"><br>
 
             <label>Name:</label>
-            <input type="text" name="name"><br>
+            <input type="text" name="fname"><br>
 
-            <label>List Price:</label>
-            <input type="text" name="price"><br>
+            <label>Area:</label>
+            <input type="text" name="farea"><br>
+
+            <label>Population:</label>
+            <input type="text" name="fpopulation"><br>
+
+            <label>Government Form:</label>
+            <input type="text" name="fgovernmentform"><br>
 
             <label>&nbsp;</label>
             <input type="submit" value="Add Product"><br>
         </form>
-        <p><a href="index0.php">View Product List</a></p>
+        <p><a href="index.php">View Product List</a></p>
     </main>
 
     <footer>
-        <p>&copy; <?php echo date("Y"); ?> My Guitar Shop, Inc.</p>
+        <p>&copy; <?php echo date("Y"); ?>My Little Corner of the World</p>
     </footer>
 </body>
 
