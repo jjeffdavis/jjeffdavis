@@ -28,3 +28,10 @@ MariaDB [information_schema]> select table_schema, table_name, column_name, is_n
 | world | countrylanguage | Percentage | NO | 0.0 | float(4,1) |
 +--------------+-----------------+----------------+-------------+----------------+--------------
 \_name,2is_nullable,4column_default, column_type from columns where table_schema = 'world' order
+
+INSERT INTO `city` VALUES (4080,'Moskin','OBL','Moskin',320);
+INSERT INTO `city` VALUES (4081,'Kilchberg','OBL','Kilchberg',21320);
+INSERT INTO `country` VALUES ('OBL','Obluvova','Europe','Mitteleuropa',50.00,1918,3600,73.2,697.00,636.00,'Obluvova','Duchy','Ljudmila Poniatowska',4080,'OB');
+
+INSERT INTO `countrylanguage` VALUES ('OBL','Oublovoviak','T',5.3);
+INSERT INTO `countrylanguage` VALUES ('OBL','WeitMittelDeutsch','F',90.7)INSERT INTO `countrylanguage` VALUES ('OBL','Obromansch','F',4.0);

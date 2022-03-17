@@ -1,6 +1,5 @@
 <!DOCTYPE HTML>
 <html>
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,21 +17,12 @@
     <![endif]-->
 </head>
 <!-- # header.inc.php - Script 9.1 -->
-
 <body>
     <header>
         <h1>Content Site<span>Home to lots of great content!</span></h1>
         <nav>
             <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="#">Archives</a></li>
-                <li><a href="contact.php">Contact</a></li>
-                <li><?php if ($user) {
-                        echo '<a href="logout.php">Logout</a>';
-                    } else {
-                        echo '<a href="create-login.php">Login</a>';
-                    } ?></li>
-                <li><a href="login.00.php">Register</a></li>
+                <li><a href="index.php">Home</a></li><li><a href="#">Archives</a></li><li><a href="contact.php">Contact</a></li><li><?php if ($user) { echo '<a href="logout.php">Logout</a>'; } else { echo '<a href="login.php">Login</a>'; } ?></li><li><a href="#">Register</a></li>
             </ul>
         </nav>
     </header>
