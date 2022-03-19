@@ -9,8 +9,22 @@ class StatisticalArray
     public function __construct($array)
     {
         $this->array = $array;
-        $mm = $this->getMean();
-        echo "<br> the mean is $mm. <br><br>";
+        $mmean = $this->getMean();
+        $msarray = $this->getSortedArray($this->array);
+
+        echo "<br>-----------------------<br>";
+        echo "<br>-----------------------<br>";
+        echo "<br> the input array, sorted is: ";
+        var_dump($msarray);
+        echo "<br> <br>";
+
+
+        $mmedian = $this->getMedian($msarray);
+
+        echo "<br> the mean is $mmean. <br><br>";
+        echo "<br> the median is $$mmedian. <br>";
+        echo "<br>-----------------------<br>";
+        echo "<br>-----------------------<br>";
     }
 
     /*  getArrayCopy()   for public use 
@@ -36,14 +50,23 @@ class StatisticalArray
         return (sprintf("%'#5.2s", $this->getMean()));
     }
 
+
+    public function getSortedArray($iarray)
+    {
+        $median = 0;  // set default value of median,  0 if all else fails.  
+        $mmmcopy = $iarray;  // get copy of original array, just in case
+        sort($mmmcopy);  //sorts array ascending in place.
+        echo "<br>";
+        return $mmmcopy;
+    }
+
     /*     getMedian() takes a copy of the original array, sorts it and returns the middlemost value of the array IF the number of elements is odd;
     else   (IF even) it returns the mean of the two most middle elements.add_product_form
      */
-    public function getMedian()
+    public function getMedian($acopy)
     {
         $median = 0;  // set default value of median,  0 if all else fails.  
-        $acopy = $this->getArrayCopy();  // get copy of original array, just in case
-        sort($acopy);  //sorts array ascending in place.
+
         echo "<br>";
         $array_length = sizeof($acopy);
         var_dump($array_length);
@@ -76,11 +99,11 @@ class StatisticalArray
     }
 }
 
-$grades1 = array(98, 76, 100, 97, 91, 84, 71, 60, 58, 101, 94, 94, 99);
+$grades1 = array(98, 76, 100, 97, 91, 84, 71, 60, 58, 91, 94, 94, 99);
 $sa1 = new StatisticalArray($grades1);
-$grades2 = array(1, 2, 3);
+$grades2 = array(1, 2, 3, 5, 5);
 $sa2 = new StatisticalArray($grades2);
-$grades3 = array(8, 10, 8, 10);
+$grades3 = array(8, 10, 6, 10);
 $sa3 = new StatisticalArray($grades3);
 
 /* $grades = array( );
@@ -88,7 +111,7 @@ $sa = new StatisticalArray($grades);
 $grades = array( );
 $sa = new StatisticalArray($grades);
 $grades = array( );
-$sa = new StatisticalArray($grades); */
+$sa = new StatisticalArray($grades); 
 
 echo "<br> very printable mean is " .  $sa1->getPrintableMean();
 echo "<br> less printable mean is " .  $sa1->getMean();
@@ -96,7 +119,7 @@ echo "<br> less printable mean is " .  $sa1->getMean();
 echo "<br> the median is " . $sa1->getMedian();
 echo "<br> sa2 =" . $sa2->getMedian();
 echo "<br> sa3 =" . $sa3->getMedian();
-
+*/
 
 exit - 1;
 

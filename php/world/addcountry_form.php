@@ -21,7 +21,7 @@ require('database.php');
 
     <main>
         <h1>New Country</h1>
-        <form action="addcountry.php" method="post" id="addcountry_form">
+        <form action="add_country.php" method="post" id="addcountry_form">
 
 
 
@@ -77,7 +77,7 @@ require('database.php');
             <label>&nbsp;</label>
             <input type="submit" value="Add Country"><br>
         </form>
-        <p><a href="addcountry.php">AddCountries</a></p>
+        <p><a href="index.php">List Countries</a></p>
     </main>
 
     <footer>
