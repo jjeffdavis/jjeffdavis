@@ -11,8 +11,8 @@ body {
     width: 760px;
     margin: 0 auto;
     color: #000060;
-    background-color: #fee;
-    border: 1px solid white;
+    background-color: #f6f0f0;
+    border: 1px solid navy;
     padding: .5em 2em;
 }
 header {
@@ -130,8 +130,10 @@ br {
   } */
 
   input {
-/*     width: 70%; */
+     width: 60%; 
     border: none;
-    border-bottom: 2px solid #025;
+    border-bottom: 2px solid #05a;
+    padding: 1px 1px;
+    margin: 1px 0;
 
   }

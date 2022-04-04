@@ -1,18 +1,14 @@
 /* the styles for the html elements */
-/* 
 html {
-    background-color: rgb(192, 192, 192); 
-    }
-    */
-
+    background-color: rgb(192, 192, 192);
+}
 body {
     margin-top: 0;
     font-family: Arial, Helvetica, sans-serif;
     width: 760px;
     margin: 0 auto;
-    color: #000060;
-    background-color: #fee;
-    border: 1px solid white;
+    background-color: white;
+    border: 1px solid black;
     padding: .5em 2em;
 }
 header {
@@ -123,15 +119,3 @@ br {
 #add_product_form input[text] {
     width: 15em;
 }
-
-/* input[type=text] {
-    border: none;
-    border-bottom: 2px solid red;
-  } */
-
-  input {
-/*     width: 70%; */
-    border: none;
-    border-bottom: 2px solid #025;
-
-  }

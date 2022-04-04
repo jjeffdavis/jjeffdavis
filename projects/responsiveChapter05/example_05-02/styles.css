@@ -1,0 +1,52 @@
+.my-first-grid {
+  display: inline-grid;
+  grid-gap: 30px;
+  grid-template-rows: 200px 400px;
+  grid-template-columns: 200px 400px;
+  background-color: #e4e4e4;
+}
+
+.grid-item-1 {
+  grid-row: 1;
+  grid-column: 1;
+}
+.grid-item-2 {
+  grid-row: 1;
+  grid-column: 2;
+}
+.grid-item-3 {
+  grid-row: 2;
+  grid-column: 1;
+}
+.grid-item-4 {
+  grid-row: 2;
+  grid-column: 2;
+}
+.grid-item-6 {
+  grid-row: 3;
+  grid-column: 2;
+}
+.grid-item-7 {
+  grid-row: 4;
+  grid-column: 1;
+}
+.grid-item-8 {
+  grid-row: 4;
+  grid-column: 2;
+}
+.grid-item-9 {
+  grid-row: 3;
+  grid-column: 3;
+}
+.grid-item-10 {
+  grid-row: 4;
+  grid-column: 4;
+}
+[class^='grid-item'] {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  outline: 3px dashed #f90;
+  font-size: 30px;
+  color: #333;
+}
