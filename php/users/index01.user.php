@@ -75,7 +75,6 @@ if (isset($_POST['submit'])) {
     //check firstname:
     if (empty($_POST['firstname'])) {
         $errors['firstname'] = 'firstname is required';
-        var_dump($errors);
     } else {
         $lfirstname = filter_input(INPUT_POST, 'firstname');
         if ($lfirstname) {
@@ -105,7 +104,7 @@ if (isset($_POST['submit'])) {
         if ($llastname) {
 
             if (!preg_match('/^([a-zA-Z\s]+)(\$*\.*_*-*\s*[a-zA-Z\s]*)*$/', $llastname)) {
-                $errors['lastname'] = "invalid username. (letters, ' ',   '$'.   '_',   '-',   '.'} are allowed";
+                $errors['lastname'] = "invalid last name. (letters, ' ',   '$'.   '_',   '-',   '.'} are allowed";
             }
         }
     }
@@ -124,11 +123,7 @@ if (isset($_POST['submit'])) {
     $age = date_diff(date_create($birthDate), date_create($currentDate));
     $lage = $age->format("%y");
 
-    /* 
-        if (!filter_var($lbirthday, FILTER_VALIDATE_birthday)) {
-            $errors['birthday'] = 'birthday must be a valid date-time';
-        }
-     */
+
 
     // check email
     if (empty($_POST['email'])) {
@@ -146,6 +141,8 @@ if (isset($_POST['submit'])) {
     // isadmin and isregistereduser
     //  are currently not enterable/updatable.  These
     //  must temporaraily be set using sql. 
+
+
 
     // check for errors.  List if found.
     if (array_filter($errors)) {
@@ -175,15 +172,15 @@ if (isset($_POST['submit'])) {
     -->
     <link rel="stylesheet" href="main.css?v=<?php echo date('his'); ?>" </head>
 
-    <!-- the body section -->
+
 
 <body>
     <header>
-        <h1> USERS </h1>
+        <h3> USERS </h3>
     </header>
 
     <main>
-        <form class="white" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
+        <form class="dummy" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
 
             &nbsp <br>
             <label>username</label>
