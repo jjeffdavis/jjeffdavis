@@ -2,11 +2,10 @@
 
 // users/index01.user.php
 
-// enhanced error reporting.  Remove in production.
+// error reporting above and beyond
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-// disable caching.  Remove in production.
 // Set a past date
 // source : https://www.geeksforgeeks.org/php-header-function/
 //
@@ -14,10 +13,9 @@ header("Expires: Sun, 25 Jul 1997 06:02:34 GMT");
 header("Cache-Control: no-cache");
 header("Pragma: no-cache");
 
-
-// require_once('db_connect.php');
-
-
+echo "before dbconnect<br>";
+require_once('db_connect.php');
+echo "after dbconnect<br>";
 
 // for all variables
 // $t for table, $tuserid, $tusername, $tpassword 
@@ -37,8 +35,7 @@ $luserid = $lusername
 $lage = 0;
 //$lisadmin = 0;
 //$lisregistereduser = 0;
-
-$lbirthday = "1900-01-01T00:00";
+$lbirthday = NULL;
 
 // set errors to NUL
 $errors = array(
@@ -53,12 +50,15 @@ $errors = array(
 );
 
 
+echo "before isset _Post check<br>";
+
 if (isset($_POST['submit'])) {
     // data has been entered and submitted
     // process input form
     // this could be insert OR update 
 
     //check username:
+
     if (empty($_POST['username'])) {
         $errors['username'] = 'username is required';
     } else {
@@ -70,7 +70,7 @@ if (isset($_POST['submit'])) {
         }
     }
 
-    //$errors['password'] = "Error, checking of email has been bypassed. (letters, ' ',   '$'.   '_',   '-',   '.'} are allowed";
+    $errors['password'] = "Error, checking of email has been bypassed. (letters, ' ',   '$'.   '_',   '-',   '.'} are allowed";
 
     //check firstname:
     if (empty($_POST['firstname'])) {
@@ -80,7 +80,7 @@ if (isset($_POST['submit'])) {
         $lfirstname = filter_input(INPUT_POST, 'firstname');
         if ($lfirstname) {
             if (!preg_match('/^([a-zA-Z\s]+)(\$*\.*_*-*\s*[a-zA-Z\s]*)*$/', $lfirstname)) {
-                $errors['firstname'] = "invalid first name. (letters, ' ',   '$'.   '_',   '-',   '.'} are allowed";
+                $errors['username'] = "invalid username. (letters, ' ',   '$'.   '_',   '-',   '.'} are allowed";
             }
         }
     }
@@ -90,7 +90,7 @@ if (isset($_POST['submit'])) {
         $lmiddle = filter_input(INPUT_POST, 'middle');
         if ($lmiddle) {
             if (!preg_match('/^[a-zA-Z\s]+$/', $lmiddle)) {
-                $errors['middle'] = "invalid middle initial. Only a letter or blank is allowed";
+                $errors['username'] = "invalid middle initial. Only a letter or blank is allowed";
             }
         }
     }
@@ -100,10 +100,11 @@ if (isset($_POST['submit'])) {
     //check lastname:
     if (empty($_POST['lastname'])) {
         $errors['lastname'] = 'lastname is required';
+        var_dump($errors);
     } else {
         $llastname = filter_input(INPUT_POST, 'lastname');
         if ($llastname) {
-
+            echo "before preg_match<br>";
             if (!preg_match('/^([a-zA-Z\s]+)(\$*\.*_*-*\s*[a-zA-Z\s]*)*$/', $llastname)) {
                 $errors['lastname'] = "invalid username. (letters, ' ',   '$'.   '_',   '-',   '.'} are allowed";
             }
@@ -111,24 +112,6 @@ if (isset($_POST['submit'])) {
     }
 
 
-    // check birthday
-    if (empty($_POST['birthday'])) {
-        $errors['birthday'] = 'An birthday is required';
-    } else {
-        $lbirthday = $_POST['birthday'];
-    }
-
-    //calculate age
-    $birthDate = $lbirthday;
-    $currentDate = date("d-m-Y");
-    $age = date_diff(date_create($birthDate), date_create($currentDate));
-    $lage = $age->format("%y");
-
-    /* 
-        if (!filter_var($lbirthday, FILTER_VALIDATE_birthday)) {
-            $errors['birthday'] = 'birthday must be a valid date-time';
-        }
-     */
 
     // check email
     if (empty($_POST['email'])) {
@@ -142,20 +125,28 @@ if (isset($_POST['submit'])) {
 
 
 
-
-    // isadmin and isregistereduser
-    //  are currently not enterable/updatable.  These
-    //  must temporaraily be set using sql. 
-
-    // check for errors.  List if found.
-    if (array_filter($errors)) {
-        // continue and display HTML.
+    // check age
+    if (empty($_POST['age'])) {
+        $errors['age'] = 'An age is required';
     } else {
-        // insert/update tuser table
-        header('Location: index01.user.php');
+        $lage = $_POST['age'];
+        if (!filter_var($lage, FILTER_VALIDATE_INT)) {
+            $errors['age'] = 'age must be an integer';
+        }
+    }
+
+
+
+
+    echo "before array_filter";
+    if (array_filter($errors)) {
+        echo "errors";
+        var_dump($errors);
+    } else {
+        echo "no errors found";
     }
 } else {
-    echo "";
+    echo "isset post is false";
 }
 
 ?>
@@ -183,6 +174,9 @@ if (isset($_POST['submit'])) {
     </header>
 
     <main>
+        <!-- 
+        <form action=" index01.user.php" method="post" id="submit.index01.user">
+    -->
         <form class="white" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
 
             &nbsp <br>
@@ -200,24 +194,32 @@ if (isset($_POST['submit'])) {
             <div class="red-text"><?php echo $errors['firstname']; ?> &nbsp </div>
 
             <label>middle</label>
-            <input type="text" name="middle" maxlength="1" value="<?php echo htmlspecialchars($lmiddle) ?>">
+            <input type="text" name="middle" value="<?php echo htmlspecialchars($lmiddle) ?>">
             <div class="red-text"><?php echo $errors['middle']; ?> &nbsp </div>
 
             <label>lastname</label>
             <input type="text" name="lastname" value="<?php echo htmlspecialchars($llastname) ?>">
             <div class="red-text"><?php echo $errors['lastname']; ?> &nbsp </div>
 
-            <label>birthday</label>
-            <input type="datetime-local" name="birthday" value="<?php echo $lbirthday; ?>">
-            <div class="red-text"><?php echo $errors['birthday']; ?> &nbsp </div>
+
 
             <label>email</label>
             <input type="text" name="email" value="<?php echo htmlspecialchars($lemail) ?>">
             <div class="red-text"><?php echo $errors['email']; ?> &nbsp </div>
 
             <label>age</label>
-            <input type="text" name="age" readonly="readonly" value="<?php echo htmlspecialchars($lage) ?>">
+            <input type="text" name="age" value="<?php echo htmlspecialchars($lage) ?>">
             <div class="red-text"><?php echo $errors['age']; ?> &nbsp </div>
+
+            <!--             <label>xxxx</label>
+            <input type="text" name="xxxx" value="<?php echo htmlspecialchars($xxxx) ?>">
+            <div class="red-text"><?php echo $errors['xxxx']; ?> &nbsp </div>
+
+            <label>xxxx</label>
+            <input type="text" name="xxxx" value="<?php echo htmlspecialchars($xxxx) ?>">
+            <div class="red-text"><?php echo $errors['xxxx']; ?> &nbsp </div> -->
+
+
 
             <label>&nbsp;</label>
             <input class="genbutton" type="submit" name="submit" value="value-submit"><br>
