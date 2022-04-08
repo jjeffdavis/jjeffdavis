@@ -35,21 +35,6 @@ header {
     margin: 1px 0;
 
   }
-
-  .bigbutton {
-    background-color: #111111;
-    color: bisque;
-    border-radius: 10px;
-    border: 8px double #cccccc;
-    text-align: center;
-    font-size: 16px;
-    width: 112px;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
-    margin: 3px;
-  }
   .genbutton {
     background-color: #4CAF50; /* Green */
     border: 1px solid black;

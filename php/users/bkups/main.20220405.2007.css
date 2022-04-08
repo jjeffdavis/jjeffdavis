@@ -35,43 +35,22 @@ header {
     margin: 1px 0;
 
   }
-
-  .bigbutton {
-    background-color: #111111;
-    color: bisque;
-    border-radius: 10px;
-    border: 8px double #cccccc;
-    text-align: center;
-    font-size: 16px;
-    width: 112px;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
-    margin: 3px;
-  }
   .genbutton {
     background-color: #4CAF50; /* Green */
     border: 1px solid black;
     color: white;
-    padding: 3px 8px;
+    padding: 3px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     border-radius: 4px;
-    width: 90%;
   }
-
-
 
   .red-text {
         color: #ff6633;
         font-size: 12px;
   }
-
-
- 
 
  @media(min-width:468px) {  
     .container-1 {
@@ -101,12 +80,6 @@ header {
       justify-content: space-between;
     }   */
 }
-.container-vertical {
-  display:flex;
-  flex-direction: column;
-
-
-}
   .greybox
  {
     border: 1px #ccc solid;
@@ -117,25 +90,25 @@ header {
     flex: 1;
     order: 1;
     flex-wrap: wrap;
-    flex: 1 1 200px;
+    flex: 1 1 100px;
   }
   
   .box-2 {
     flex: 5;
     order: 2;
     flex-wrap: wrap;
-    flex: 3 3 200px;
+    flex: 3 3 100px;
   }
   
   .box-3 {
     flex: 4;
     order: 3;
     flex-wrap: wrap;
-    flex: 4 4 200px;
+    flex: 4 4 100px;
 
  }
    .box->* {
-    flex: 1 1 200px;
+    flex: 1 1 220px;
 }   
 
   .image-center{
