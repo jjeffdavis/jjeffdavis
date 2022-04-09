@@ -70,7 +70,9 @@ header {
         font-size: 12px;
   }
 
-
+  .bigfont {
+      font-size: 24px;
+    }
  
 
  @media(min-width:468px) {  

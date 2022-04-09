@@ -1,6 +1,8 @@
 <?php
 
 //  index01.php
+//  register new user
+//  (or in future) update user data
 
 
 
@@ -18,14 +20,16 @@ header("Expires: Sun, 25 Jul 1997 06:02:34 GMT");
 header("Cache-Control: no-cache");
 header("Pragma: no-cache");
 
-
+/* 
+// for future development
+//
 echo "<br>starting session<br>";
 session_start();
 $_SESSION["program"] = "index01.php";
 $_SESSION["function"] = "TBD";
 print_r($_SESSION);
-
-
+//
+ */
 
 // for all variables
 // $t for table, $tuserid, $tusername, $tpassword 
@@ -40,13 +44,14 @@ $luserid = $lusername
     = $lmiddle
     = $llastname
     = $lbirthday
-    = $lemail = '';
-$lage = 0;
+    = $lemail
+    = '';
+$lage = 102;
 $lsubmit = "INSERT USER";
 //$lisadmin = 0;
 //$lisregistereduser = 0;
 
-$lbirthday = "1900-01-01T00:00";
+$lbirthday = "1920-01-01T00:00";
 
 
 $logusername
@@ -63,7 +68,8 @@ $errors = array(
     'lastname'  =>  '',
     'birthday'  =>  '',
     'email'  =>  '',
-    'age'  =>  ''
+    'age'  =>  '',
+    'topofpage' => ''
 );
 
 
@@ -202,7 +208,7 @@ if (isset($_POST['submit'])) {
 
 <body>
     <header>
-        <h3> USERS </h3>
+        <div class="red-text bigfont"><?php echo $errors['topofpage']; ?> &nbsp </div>
     </header>
 
     <main>
@@ -212,35 +218,24 @@ if (isset($_POST['submit'])) {
 
          -->
         <div class="container-1">
+
+
             <div class="greybox box-1">
-                <h3>The cat came back.</h3>
+
                 <img class="image-center" src="/root-ennui/img/oneBabyTiger.jpg" alt="***Problem***">
                 <!--                 <img class="image-center" src="/root-ennui/img/prayforukraine.jpg" alt="***Problem***"> -->
-                <h5>If registered, login here:</h5>
-
-                <form class="white" action='index02.php' method="POST">
-                    <label>username</label>
-                    <input type="text" name="logusername" value="<?php echo htmlspecialchars($lusername) ?>">
-                    <div class="red-text"><?php echo $errors['username']; ?> &nbsp </div>
-
-                    <label>password</label>
-                    <input type="text" name="logpassword" value="<?php echo htmlspecialchars($lpassword) ?>">
-                    <div class="red-text"><?php echo $errors['password']; ?> &nbsp </div>
 
 
-                    <label>&nbsp;</label>
-                    <input class="genbutton" type="submit" name="Login"
-                        value="<?php echo htmlspecialchars($logsubmit) ?>"><br>
-                </form>
+
 
             </div>
             <div class="greybox box-2">
-                <h3>Box Two</h3>
+                <h3>REGISTER HERE:</h3>
 
 
                 <form class="white" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
-
-                    &nbsp <br>
+                    <!-- 
+                    &nbsp <br> -->
                     <label>username</label>
                     <input type="text" name="username" value="<?php echo htmlspecialchars($lusername) ?>">
                     <div class="red-text"><?php echo $errors['username']; ?> &nbsp </div>
@@ -284,9 +279,9 @@ if (isset($_POST['submit'])) {
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
             <div class=" box-3">
-                <h3>Tigers</h3>
+
                 <div class="cchild flexcenter">
-                    <img class="image-center" src="/img/babyCats.jpg" alt="***Problem***">
+                    <img class="image-center" src="/img/gratefuldead.jpeg" alt="***Problem***">
                 </div>
             </div>
         </div>
@@ -294,7 +289,7 @@ if (isset($_POST['submit'])) {
     </main>
 
     <footer>
-        <p>&copy; <?php echo date("Y"); ?>USERS</p>
+        <p>&copy; <?php echo date("Y"); ?>NOT WAVING but DROWNING</p>
     </footer>
 </body>
 

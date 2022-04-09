@@ -76,6 +76,5 @@ if (!$row) {
     // do not display HTML, go to php file below:
     header('Location: index01.user.php');
 } else {
-    echo '<br><br>found<br><br>';
-    echo '<br><br> must output error message <br>...then fall thru to HTML.<br>';
+    $errors['topofpage'] = "*** Error ***  username " . $lusername . " already exists";
 }
