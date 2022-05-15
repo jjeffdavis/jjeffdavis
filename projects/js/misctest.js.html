@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>  js tests</title>
+    <style>
+    div {
+      border: 4px dashed black;
+      padding: 1px 3px 4px 20px;
+    }
+    .fred-gump{
+        border: 14px solid black;
+        margin: 12px 0 0 6px;
+    }
+    </style>
+
+
+    <script>
+customElements.define("inline-circle", class InlineCircle extends HTMLElement {
+// The browser calls this method when an <inline-circle> element
+// is inserted into the document. There is also a disconnectedCallback()
+// that we don't need in this example.
+connectedCallback() {
+// Set the styles needed to create circles
+this.style.display = "inline-block";
+this.style.borderRadius = "50%";
+this.style.border = "solid black 1px";
+this.style.transform = "translateY(10%)";
+// If there is not already a size defined, set a default size
+// that is based on the current font size.
+if (!this.style.width) {
+this.style.width = "0.8em";
+this.style.height = "0.8em";
+}
+}
+// The static observedAttributes property specifies which attributes
+// we want to be notified about changes to. (We use a getter here since
+// we can only use "static" with methods.)
+static get observedAttributes() { return ["diameter", "color"]; }
+// This callback is invoked when one of the attributes listed above
+// changes, either when the custom element is first parsed, or later.
+attributeChangedCallback(name, oldValue, newValue) {
+switch(name) {
+case "diameter":
+// If the diameter attribute changes, update the size styles
+this.style.width = newValue;
+this.style.height = newValue;
+break;
+case "color":
+// If the color attribute changes, update the color styles
+this.style.backgroundColor = newValue;
+break;
+}
+}
+// Define JavaScript properties that correspond to the element's
+// attributes. These getters and setters just get and set the underlying
+// attributes. If a JavaScript property is set, that sets the attribute
+// which triggers a call to attributeChangedCallback() which updates
+// the element styles.
+get diameter() { return this.getAttribute("diameter"); }
+set diameter(diameter) { this.setAttribute("diameter", diameter); }
+get color() { return this.getAttribute("color"); }
+set color(color) { this.setAttribute("color", color); }
+});
+    </script>
+
+
+</head>
+
+
+
+<body>
+
+    <div id="elem" class="fred-gump">
+        <div id="elem-content">Element</div>
+      </div>
+      
+      <script>
+        // elem is a reference to DOM-element with id="elem"
+        elem.style.background = 'red';
+        //  CAN'T do the above trick with class selectors:  //fred-gump[0].style.background = 'gold';
+      
+        // id="elem-content" has a hyphen inside, so it can't be a variable name
+        // ...but we can access it using square brackets: window['elem-content']
+      </script>
+
+
+<div class="color" id="top">
+<h1>The Document Object</h1>
+<h2>The getElementsByClassName() Method</h2>
+
+<p>Change the background color of the first element with the classes "example" and "color":</p>
+</div>
+
+<br>
+<p>
+  The document has one marble: <inline-circle></inline-circle>.
+  The HTML parser instantiates two more marbles:
+  <inline-circle diameter="1.2em" color="blue"></inline-circle>
+  <inline-circle diameter=".6em" color="gold"></inline-circle>.
+  How many marbles does the document contain now?
+  </p>
+
+<div class="example fred-gump">
+  <p>This is a paragraph.</p>
+</div>
+<div class="example color">
+<button onclick="myFunction()">Insert</button>
+<p>Click "insert" to insert some text inside the header:</p>
+
+<h2 id="myH2" class="color">My Header</h2>
+</div>
+<script>
+function myFunction() {
+  const h2 = document.getElementById("myH2");
+  let text = "My inserted text";
+  h2.insertAdjacentText("afterbegin", text);
+}
+</script>
+<br>
+<div class="example color">
+  <p>This is a paragraph2.</p>
+</div>
+<br>
+<div class="example color fred-gump">
+  <p>This is a paragraph3.
+
+  <inline-circle diameter="1.2em" color="blue"></inline-circle>
+  <inline-circle diameter=".4em" color="gold"></inline-circle>
+  <inline-circle diameter=".5em" color="green"></inline-circle>
+  <inline-circle diameter=".6em" color=#16A085></inline-circle>
+  <inline-circle diameter=".7em" color=#2E86C1></inline-circle>
+  <inline-circle diameter=".8em" color=#34495E ></inline-circle>
+  <inline-circle diameter=".9em" color="blue"></inline-circle>
+  <inline-circle diameter=".1.1em" color="gold"></inline-circle>
+</p>
+</div>
+
+<script>
+  let destination = 'world' // A regular string
+let greeting = `Hello, ${destination.toUpperCase()}!` // A template literal
+
+
+const parElements = document.getElementsByClassName("example color");
+var textToAdd = document.createTextNode("Text to be added");
+parElements[1].appendChild(textToAdd);
+
+
+console.log(greeting);
+document.write(greeting);
+const collection = document.getElementsByClassName("example color");
+collection[0].style.backgroundColor = "red";
+collection[1].style.backgroundColor = "navy";
+collection[1].style.color = "white";
+const collection2 = document.getElementsByClassName("example ");
+collection2[0].style.backgroundColor = "green";
+collection2[1].style.color = "white";
+collection2[1].style.fontSize = "48px";
+
+const collection3 = document.getElementsByClassName("color");
+collection3[0].style.backgroundColor = "gold";
+
+document.getElementById('top').style.fontSize='8px' 
+</script>
+
+</body>
+</html>

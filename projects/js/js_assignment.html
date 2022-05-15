@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>CS130 JavaScript Assignment</h2>
+
+
+
+
+
+<script>
+
+function $$(str) {
+    document.write(str)
+}
+
+
+function maxOfThree(i,j,k) {  //input 3 numbers, output number
+largest = i;
+if (j > largest) { largest = j}
+if (k > largest) { largest = k}
+return largest
+}
+$$('<h4 style="color:darkslategray; background-color:beige;" > ' )
+$$( "<br> max of 77 ,2, 3 is " + maxOfThree(77, 2, 3));
+$$( "<br> max of '9', 2 ,33 is " + maxOfThree( '9' ,2 ,33));
+document.write( "<br> max of 'zzz'  ,2 ,3 is " + maxOfThree('zzz'  ,2 ,3 ));
+document.write( "<br> max of 66, 102.5, 88 is " + maxOfThree(66, 102.5, 88));
+document.write( "<br> max of -66, -102.5, -88 is " + maxOfThree( -66, -102.5, -88 ));
+document.write( "<br> max of  'beta', 'gamma' ,'alpha' is " + maxOfThree('beta', 'gamma' ,'alpha'));
+$$('</h4  > ' )
+
+function sum(n_array) {
+    nsum = 0;
+    for (n in n_array){
+        nsum += n_array[n];
+    }
+    return nsum;
+}
+function product(n_array) {
+    nprod = 1;
+    for (n in n_array){
+        nprod *= n_array[n];
+    }
+    return  nprod;
+}
+const arrayx = [21, 31, 41, 1];
+const array2 = [1, 3, 4, 1];
+const array7 = [1, 7, 3, 2, 5,6, 4]
+const array0 = [0,1, 2, 3, 4 ,5, 6 ,7, 8 , 9]
+const arraydecim = [0.5, 1.5, 2.3, 4.7]
+
+const arraysees = [arrayx, array2, array7, array0, arraydecim]
+
+for (let x of arraysees) {
+    $$('<h4 style="color:indigo; background-color:beige;" > '  + x + 
+        ", sum is " + sum(x) +
+        ", product is " + product(x) +"</h4>")
+}
+
+
+
+
+function sreverse(istring) {
+    let ostring = ""
+    let slen = istring.length
+    if  (slen < 2) { ostring = istring}
+    else {
+        for( let i = slen -1 ; i >= 0; i--) {
+            //$$("<br>i = " + i)
+            ostring += istring.substr(i,1)
+            //$$("<br> ostring is now " + ostring)
+        }
+    }
+    return ostring
+} 
+
+
+
+const istralpha = "PATH is /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:"
+const istr7 = "7"
+const istrnull = ""
+const istrchin = "1 2 3 4 99"
+const istrcount = "| count(*) |"
+
+$$(istrcount)
+
+const stringees = [istralpha, istr7,   istrnull, istrchin, istrcount]
+
+for (let xx of stringees) {
+    //$$("xx is" + xx + "<br>")
+    document.write('<h4 style="color:red; background-color:beige;" > ' + xx + "<br> &nbsp&nbsp&nbsp reversed is <br>" + sreverse(xx) + "</h4>")
+}
+
+
+
+
+// this is a standard bubblesort
+function bubblesort(xarray) {
+    let k = xarray.length
+    for(let m = k - 1; m > 0; m--) {
+        for(let n = 0; n <=m; n++) {
+            if (xarray[n] > xarray[n + 1]) {
+                let temp = xarray[n]
+                xarray[n] = xarray[n + 1]
+                xarray[n+1] = temp
+            }
+        }
+    }
+    return xarray
+}
+
+function findLenLongestWord(llarray) { //input array of strings, output integer
+    maxlen = 0
+    for(let i = 0; i < llarray.length; i++) {
+        if ((llarray[i]).length > maxlen) { maxlen = (llarray[i]).length }
+    }
+    return maxlen
+}
+
+const aa = "aaaaaa"
+const bb = "bbbb"
+const cc = "aacc"
+
+const arra = ["gum","ludwig", "slop", "anger", "zebra", "munch", aa, bb, cc]
+const arrb = [aa]
+const arrc = []
+const arrd = [bb, "slop", "anger", "zebra", "a"]
+
+texta = "Green.beans will.keep.in.the.refrigerator.for.up to 3 days as long as they are in an airtight container. I snack on them chilled right from the fridge."
+textarray = texta.split(" ");
+textb = "We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness. — That to secure these rights, Governments are instituted among Men, deriving their just powers from the consent of the governed, — That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government, laying its foundation on such principles and organizing its powers in such form, as to them shall seem most likely to effect their Safety and Happiness." 
+textarrayb = textb.split(" ")
+
+
+const somearrays = [arrayx, array2, array7, array0, arraydecim, arra, arrb, arrc, arrd, textarray, textarrayb]
+
+
+for (let xxx of somearrays) {
+    document.write('<h4 style="color:green; background-color:beige;" > ' 
+        + xxx 
+        + "<br>&nbsp &nbsp&nbsp     sorted is: <br>" 
+        + bubblesort(xxx) 
+        + "<br>&nbsp&nbsp&nbspand the length of the longest word is:<br> "
+        + findLenLongestWord(xxx)
+        + "</h4>")
+}
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+<!---
+
+//js_assignment.js
+/*
+maxOfThree();  //input 3 numbers, output number
+
+sum();  //input array of numbers, output number
+multiply(); //input array of numbers, output number
+reverse(string); input string, returns string
+sort(); //input and output arrays
+findLongestWord(); //input array of strings, output string.
+*/
+
+maxOfThree(i,j,k) {  //input 3 numbers, output number
+    if (isNaN(i)) {
+        document.write( $i " is not numeric");
+    }
+    return i * j * k;
+}
+sum();  //input array of numbers, output number
+multiply(); //input array of numbers, output number
+reverse(string); input string, returns string
+sort(); //input and output arrays
+findLongestWord(); //input array of strings, output string.
+
+
+-->>
+

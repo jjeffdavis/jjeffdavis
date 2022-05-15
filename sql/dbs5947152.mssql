@@ -1,0 +1,87 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.10
+-- https://www.phpmyadmin.net/
+--
+-- Host: db5007215707.hosting-data.io
+-- Generation Time: Apr 11, 2022 at 01:00 AM
+-- Server version: 10.5.12-MariaDB-1:10.5.12+maria~bullseye-log
+-- PHP Version: 7.0.33-0+deb9u12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `dbs5947152`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tuser`
+--
+
+CREATE TABLE `tuser` (
+  `tuserid` int(11) NOT NULL,
+  `tusername` varchar(255) NOT NULL,
+  `tpassword` varchar(255) NOT NULL DEFAULT '',
+  `tfirstname` varchar(255) NOT NULL DEFAULT '',
+  `tmiddle` char(1) NOT NULL DEFAULT '',
+  `tlastname` varchar(255) NOT NULL DEFAULT '',
+  `tbirthday` datetime DEFAULT NULL,
+  `temail` varchar(255) NOT NULL,
+  `tage` int(11) NOT NULL DEFAULT 0,
+  `tisadmin` tinyint(1) NOT NULL DEFAULT 0,
+  `tisregistereduser` tinyint(1) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tuser`
+--
+
+INSERT INTO `tuser` (`tuserid`, `tusername`, `tpassword`, `tfirstname`, `tmiddle`, `tlastname`, `tbirthday`, `temail`, `tage`, `tisadmin`, `tisregistereduser`) VALUES
+(1, 'RalphKramden', 'busdriver', 'Ralph', '', 'Kramden', '1932-02-11 00:00:00', 'rkramden@newyorkbus.org', 90, 0, 1),
+(3, 'iris', 'HurricaneInNewYork', 'Iris', '', 'Sunflower', '1999-02-11 00:00:00', 'chinacatsunflower@greatfuldead.org', 0, 0, 0),
+(13, 'MrsBeasley', 'familyaffair', 'Berth', 'B', 'Beasley', '1945-01-01 00:00:00', 'berthabeasley@cbs.com', 77, 0, 1),
+(15, 'nungesser', 'alicegumbiner', 'Alice Gumbiner', 'X', 'Nungesser', '1902-01-01 00:00:00', 'bigalice@alicegumbiner.net', 120, 0, 1),
+(16, 'ubergesser', 'alicegumbiner', 'Alice Gumbiner', 'X', 'Buhl', '1902-01-01 00:00:00', 'bigalice@alicegumbiner.net', 120, 0, 1),
+(17, 'ubergesserx', 'alicegumbiner', 'Alice Gumbiner', 'X', 'Buhl', '1902-01-01 00:00:00', 'bigalice@alicegumbiner.net', 120, 0, 1),
+(19, 'EleanorFruttx', 'efr', 'Eleanor', '', 'Frutt', '1920-01-01 00:00:00', 'efrutt@thepractice.com', 102, 0, 1),
+(20, 'gunShopsOfIshir', 'Halsted', 'Jeffrey', 'J', 'Davis', '1999-01-01 00:00:00', 'me@hotmail.com', 23, 0, 1),
+(21, 'ChinaCatSunflowers', 'RosesOnThePiano', 'Caleb', '', 'Quayle', '1920-01-01 00:00:00', 'caleb@byebye.club', 102, 0, 1),
+(23, 'Shaws', 'henshaw', 'Marcus', '', 'Henshaw', '1832-01-01 00:00:00', 'henshaw@guptatech.org', 190, 0, 1),
+(25, 'Edith Bunker', 'Moon River', 'Edie', 'J', 'Buhl', '1944-01-01 00:00:00', 'edith@flonase.com', 78, 0, 1),
+(27, 'yyy', 'yyy', 'xxx', 'x', 'xxx', '1944-01-01 00:00:00', 'yyy@flonase.com', 78, 0, 1);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `tuser`
+--
+ALTER TABLE `tuser`
+  ADD PRIMARY KEY (`tuserid`),
+  ADD UNIQUE KEY `tusername` (`tusername`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `tuser`
+--
+ALTER TABLE `tuser`
+  MODIFY `tuserid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

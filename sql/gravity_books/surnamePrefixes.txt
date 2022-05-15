@@ -1,0 +1,32 @@
+mc 
+mac
+von
+van
+del
+de
+du
+da
+degli
+della
+di
+dos
+le
+la
+el
+les
+los
+las
+al
+ben
+
+de la
+van de
+van der
+
+postfix:
+Jr.
+Jr
+Sr.
+Sr
+
+select author_name, SUBSTR(title,1, 128) FROM  bookdetail order by author_name, title;

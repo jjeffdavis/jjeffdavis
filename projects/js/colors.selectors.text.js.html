@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  border: 4px dashed black;
+  padding: 1px 3px 4px 20px;
+}
+.fred-gump{
+    border: 14px solid black;
+    margin: 12px 0 0 6px;
+}
+</style>
+</head>
+<body>
+
+    <div id="elem" class="fred-gump">
+        <div id="elem-content">Element</div>
+      </div>
+      
+      <script>
+        // elem is a reference to DOM-element with id="elem"
+        elem.style.background = 'red';
+        //  CAN'T do the above trick with class selectors:  //fred-gump[0].style.background = 'gold';
+      
+        // id="elem-content" has a hyphen inside, so it can't be a variable name
+        // ...but we can access it using square brackets: window['elem-content']
+      </script>
+
+
+<div class="color" id="top">
+<h1>The Document Object</h1>
+<h2>The getElementsByClassName() Method</h2>
+
+<p>Change the background color of the first element with the classes "example" and "color":</p>
+</div>
+
+<br>
+<div class="example fred-gump">
+  <p>This is a paragraph.</p>
+</div>
+<br>
+<div class="example color">
+  <p>This is a paragraph2.</p>
+</div>
+<br>
+<div class="example color">
+  <p>This is a paragraph3.</p>
+</div>
+
+<script>
+const collection = document.getElementsByClassName("example color");
+collection[0].style.backgroundColor = "red";
+collection[1].style.backgroundColor = "navy";
+collection[1].style.color = "white";
+const collection2 = document.getElementsByClassName("example ");
+collection2[0].style.backgroundColor = "green";
+collection2[1].style.color = "white";
+collection2[1].style.fontSize = "48px";
+
+const collection3 = document.getElementsByClassName("color");
+collection3[0].style.backgroundColor = "gold";
+
+document.getElementById('top').style.fontSize='8px'
+</script>
+
+</body>
+</html>

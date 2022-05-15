@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <!---  index.flexbox.001.html -->
+
+  <head>
+    <title>show box model</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Dosis"
+      rel="stylesheet"
+    />
+    <link href="css/index01.css" rel="stylesheet" />
+    <link href="css/index02.css" rel="stylesheet" />
+    <link href="css/index03.css" rel="stylesheet" />
+    <link href="css/index04.css" rel="stylesheet" />
+    <link href="css/common.css" rel="stylesheet" />
+    <style>
+
+
+        html {
+        background: #FCF4EC;
+        font-family: Arial;
+        text-transform: uppercase;
+        }
+
+        main {
+        display: flex;
+
+        }
+        .resizeboth{
+            resize: both;
+            overflow:auto;
+        }
+        .flex-container {
+        flex-wrap: wrap;
+        flex-direction: column; 
+        flex-direction: row;
+
+      
+        flex-flow: row wrap;
+
+        }
+        .item {
+        font-size: 1.5rem;
+        line-height: 1;
+        text-align: center;
+        padding: 3rem 1rem;
+        background: #F8BBD0;
+        border: 6px solid #E91E63;
+        color: #E91E63;
+        margin: 6px;
+  
+
+        }
+
+        article.item {
+        border: 6px solid #9C27B0;
+        background-color: #E0D0FF;
+        color: #9C27B0;
+/*         order: 2; */
+        flex: 3;
+        min-width: 320px;
+        }
+        .order1{
+            order:1;
+        }
+        .order2{
+            order:2;
+        }
+        .order3{
+            order:3;
+        }
+        .order4{
+            order:4;
+        }
+        .order5{
+            order:5;
+        }
+        .sidebar-left {
+        background-color: #C5CAE9;
+        border: 6px solid #3F51B5;
+        color: #3F51B5;
+        order: 1;
+        flex: 1;
+        }
+        .sidebar-right {
+        background-color: #B2DFDB;
+        border: 6px solid #009688;
+        color: #009688;
+        order: 3;
+        flex: 1;
+        }
+        @media screen and (max-width:2200px) {
+        main {
+            flex-wrap: wrap;
+            }
+        }
+        .sidebar-left {
+            order: 2;
+        }
+
+
+    </style>
+  </head>
+
+  <body>
+
+
+    <img
+      alt="fix me"
+      class="image-center"
+      src="/root-ennui/img/prayforukraine.jpg"
+    /><br />
+
+    <br />
+    <h2 class="bigfont">
+      Not <sup>waving</sup> but <sub>drowning</sub>..............Jeff Davis
+      CS130
+    </h2>
+
+    <br />
+    <h1 class="">THIS PAGE IS A WORK IN PROGRESS</h1>
+
+    <div class="  flex-container">
+        <header class="item ">Nav Bar/Header</header>
+        <main>
+            <aside class="item sidebar-left order1">Left Sidebar</aside>
+            <div class="resizeboth">
+          <article class="item">The Main Article1!
+
+            <h2> this div using class selector .gump.</h2>
+
+            <p>This section is followed by an [hr] thematic break, where [hr] stands for horizontal rule, a break with a horizontal line.</p>
+            <hr>
+            <h2>Catering</h2>
+            <p>You have fun... <s>you'll pay thru the nose </s> <em>we'll handle the cooking.</em>  <s> xxx  </s></p>
+            <p>xxx</p>
+          
+            <hr>
+            
+            <h2>features of class selector gump:</h2>
+            <p>features<br />
+            being clipped to content, the background color of the page fills the border and padding areas.<br>
+            the text left justifies and text flows to the size of the box content.</p>
+
+          </article>
+      </div>
+              <article class="item">Another Article2!</article>
+              <div class="cbox">
+<!--                 <img alt="fix me" class="" src="/root-ennui/img/gratefulDead.jpeg" /> -->
+              </div>
+              <br>
+          <article class="item">The Main Article3!</article>
+      
+              <article class="item">Another Article4!</article>
+              <article class="item">The Main Article5!</article>
+
+    <div class="cbox ">
+        <img alt="fix me" class="" src="/root-ennui/img/gratefulDead.jpeg" />
+      </div>
+      <br>
+      
+              <article class="item ">Another Article5!</article>
+          <article class="item ">The Main Article6!</article>
+      
+              <article class="item r">Another Article!7</article>
+      
+
+          <div class="cbox">
+             <img alt="fix me" class="" src="/root-ennui/img/gratefulDead.jpeg" />  
+          </div>
+          <br>
+          <aside class="item sidebar-right">Right Sidebar</aside>
+      
+      
+        </main>
+        <footer class="item">Footer</footer>
+      </div>
+
+
+
+
+  
+    <br /><br />
+  </body>
+</html>
